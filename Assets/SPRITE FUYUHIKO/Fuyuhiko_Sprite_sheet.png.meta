@@ -1,0 +1,2337 @@
+fileFormatVersion: 2
+guid: d520d579f25a52b40819d8475eb85cc6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4358211372772476714
+    second: Fuyuhiko_Sprite_sheet_0
+  - first:
+      213: -8199487028590439902
+    second: Fuyuhiko_Sprite_sheet_1
+  - first:
+      213: 4338898204350264783
+    second: Fuyuhiko_Sprite_sheet_2
+  - first:
+      213: 6447350482031783080
+    second: Fuyuhiko_Sprite_sheet_3
+  - first:
+      213: -6916766347456802081
+    second: Fuyuhiko_Sprite_sheet_4
+  - first:
+      213: 8033220922744820210
+    second: Fuyuhiko_Sprite_sheet_5
+  - first:
+      213: -1785717152584891874
+    second: Fuyuhiko_Sprite_sheet_6
+  - first:
+      213: -1373562075398407410
+    second: Fuyuhiko_Sprite_sheet_7
+  - first:
+      213: -5240287318859896883
+    second: Fuyuhiko_Sprite_sheet_8
+  - first:
+      213: 5866408322514833261
+    second: Fuyuhiko_Sprite_sheet_9
+  - first:
+      213: 7794154472442676235
+    second: Fuyuhiko_Sprite_sheet_10
+  - first:
+      213: 2713564687204225958
+    second: Fuyuhiko_Sprite_sheet_11
+  - first:
+      213: -3611323614826939726
+    second: Fuyuhiko_Sprite_sheet_12
+  - first:
+      213: -5548228995968787435
+    second: Fuyuhiko_Sprite_sheet_13
+  - first:
+      213: 4062364614108177628
+    second: Fuyuhiko_Sprite_sheet_14
+  - first:
+      213: -4706595741123424248
+    second: Fuyuhiko_Sprite_sheet_15
+  - first:
+      213: 5094072582212071820
+    second: Fuyuhiko_Sprite_sheet_16
+  - first:
+      213: 1648888794908055978
+    second: Fuyuhiko_Sprite_sheet_17
+  - first:
+      213: 7663303315770329915
+    second: Fuyuhiko_Sprite_sheet_18
+  - first:
+      213: 3111665540496522722
+    second: Fuyuhiko_Sprite_sheet_19
+  - first:
+      213: -4134805447138070280
+    second: Fuyuhiko_Sprite_sheet_20
+  - first:
+      213: -5970543288814091695
+    second: Fuyuhiko_Sprite_sheet_21
+  - first:
+      213: 9021008363005431127
+    second: Fuyuhiko_Sprite_sheet_22
+  - first:
+      213: 6928475577008517112
+    second: Fuyuhiko_Sprite_sheet_23
+  - first:
+      213: 2944996616098128959
+    second: Fuyuhiko_Sprite_sheet_24
+  - first:
+      213: -2399812333353816114
+    second: Fuyuhiko_Sprite_sheet_25
+  - first:
+      213: 9028939535590592651
+    second: Fuyuhiko_Sprite_sheet_26
+  - first:
+      213: 2058365156439352554
+    second: Fuyuhiko_Sprite_sheet_27
+  - first:
+      213: -3856990815702979963
+    second: Fuyuhiko_Sprite_sheet_28
+  - first:
+      213: 5233978206725626887
+    second: Fuyuhiko_Sprite_sheet_29
+  - first:
+      213: -2315462357325507342
+    second: Fuyuhiko_Sprite_sheet_30
+  - first:
+      213: 241333907694631122
+    second: Fuyuhiko_Sprite_sheet_31
+  - first:
+      213: 8983488489925241713
+    second: Fuyuhiko_Sprite_sheet_32
+  - first:
+      213: -5217616208465596478
+    second: Fuyuhiko_Sprite_sheet_33
+  - first:
+      213: -3847943807264365300
+    second: Fuyuhiko_Sprite_sheet_34
+  - first:
+      213: -1511721775505886163
+    second: Fuyuhiko_Sprite_sheet_35
+  - first:
+      213: 6119253137238897281
+    second: Fuyuhiko_Sprite_sheet_36
+  - first:
+      213: -7011857841654098235
+    second: Fuyuhiko_Sprite_sheet_37
+  - first:
+      213: -2003783864358672324
+    second: Fuyuhiko_Sprite_sheet_38
+  - first:
+      213: -213932282993343618
+    second: Fuyuhiko_Sprite_sheet_39
+  - first:
+      213: -1369265800892772463
+    second: Fuyuhiko_Sprite_sheet_40
+  - first:
+      213: -6436952014491215047
+    second: Fuyuhiko_Sprite_sheet_41
+  - first:
+      213: 442318044298279311
+    second: Fuyuhiko_Sprite_sheet_42
+  - first:
+      213: 5541341980689230581
+    second: Fuyuhiko_Sprite_sheet_43
+  - first:
+      213: -8428541865340620534
+    second: Fuyuhiko_Sprite_sheet_44
+  - first:
+      213: -7788048007205431790
+    second: Fuyuhiko_Sprite_sheet_45
+  - first:
+      213: 5143428604686005959
+    second: Fuyuhiko_Sprite_sheet_46
+  - first:
+      213: -2878951289582110233
+    second: Fuyuhiko_Sprite_sheet_47
+  - first:
+      213: 6561234376135817246
+    second: Fuyuhiko_Sprite_sheet_48
+  - first:
+      213: -5428731768017542843
+    second: Fuyuhiko_Sprite_sheet_49
+  - first:
+      213: 7223393061300087765
+    second: Fuyuhiko_Sprite_sheet_50
+  - first:
+      213: 3126589749661974114
+    second: Fuyuhiko_Sprite_sheet_51
+  - first:
+      213: -9088376814205404435
+    second: Fuyuhiko_Sprite_sheet_52
+  - first:
+      213: -5214145660473352148
+    second: Fuyuhiko_Sprite_sheet_53
+  - first:
+      213: -5205759327090294299
+    second: Fuyuhiko_Sprite_sheet_54
+  - first:
+      213: 4691589224678824232
+    second: Fuyuhiko_Sprite_sheet_55
+  - first:
+      213: -9081264327254842534
+    second: Fuyuhiko_Sprite_sheet_56
+  - first:
+      213: -4802207274992032210
+    second: Fuyuhiko_Sprite_sheet_57
+  - first:
+      213: -8369375563735297851
+    second: Fuyuhiko_Sprite_sheet_58
+  - first:
+      213: -2704058653788641744
+    second: Fuyuhiko_Sprite_sheet_59
+  - first:
+      213: -6815059275424651659
+    second: Fuyuhiko_Sprite_sheet_60
+  - first:
+      213: -8790160368177090848
+    second: Fuyuhiko_Sprite_sheet_61
+  - first:
+      213: 3206192502113637035
+    second: Fuyuhiko_Sprite_sheet_62
+  - first:
+      213: -3788572085925313672
+    second: Fuyuhiko_Sprite_sheet_63
+  - first:
+      213: -867732981177161147
+    second: Fuyuhiko_Sprite_sheet_64
+  - first:
+      213: -4067331126382627885
+    second: Fuyuhiko_Sprite_sheet_65
+  - first:
+      213: -5656037594564790976
+    second: Fuyuhiko_Sprite_sheet_66
+  - first:
+      213: -4122151131856388500
+    second: Fuyuhiko_Sprite_sheet_67
+  - first:
+      213: -1261398708685370533
+    second: Fuyuhiko_Sprite_sheet_68
+  - first:
+      213: -7178263980596108096
+    second: Fuyuhiko_Sprite_sheet_69
+  - first:
+      213: 1890480047446472146
+    second: Fuyuhiko_Sprite_sheet_70
+  - first:
+      213: 6327354513408765288
+    second: Fuyuhiko_Sprite_sheet_71
+  - first:
+      213: -6763922885936314362
+    second: Fuyuhiko_Sprite_sheet_72
+  - first:
+      213: 7588821144175763041
+    second: Fuyuhiko_Sprite_sheet_73
+  - first:
+      213: -402293364945651195
+    second: Fuyuhiko_Sprite_sheet_74
+  - first:
+      213: -6627745370081521908
+    second: Fuyuhiko_Sprite_sheet_75
+  - first:
+      213: 2631375182407242177
+    second: Fuyuhiko_Sprite_sheet_76
+  - first:
+      213: -3985704231626323573
+    second: Fuyuhiko_Sprite_sheet_77
+  - first:
+      213: -8739196557221392755
+    second: Fuyuhiko_Sprite_sheet_78
+  - first:
+      213: -2949344712405738898
+    second: Fuyuhiko_Sprite_sheet_79
+  - first:
+      213: 2653361879458091276
+    second: Fuyuhiko_Sprite_sheet_80
+  - first:
+      213: -417535576995955662
+    second: Fuyuhiko_Sprite_sheet_81
+  - first:
+      213: -1340405672756670254
+    second: Fuyuhiko_Sprite_sheet_82
+  - first:
+      213: 8012728444350355628
+    second: Fuyuhiko_Sprite_sheet_83
+  - first:
+      213: -5526301174801104317
+    second: Fuyuhiko_Sprite_sheet_84
+  - first:
+      213: 4037780647948243517
+    second: Fuyuhiko_Sprite_sheet_85
+  - first:
+      213: -129057494464546991
+    second: Fuyuhiko_Sprite_sheet_86
+  - first:
+      213: 1367823136278649295
+    second: Fuyuhiko_Sprite_sheet_87
+  - first:
+      213: -1245763932370137550
+    second: Fuyuhiko_Sprite_sheet_88
+  - first:
+      213: 5553541429245023742
+    second: Fuyuhiko_Sprite_sheet_89
+  - first:
+      213: -3789950825897988784
+    second: Fuyuhiko_Sprite_sheet_90
+  - first:
+      213: -5721750204992645634
+    second: Fuyuhiko_Sprite_sheet_91
+  - first:
+      213: 8964172403281670170
+    second: Fuyuhiko_Sprite_sheet_92
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 3099
+        width: 98
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d834d5e8d58483c0800000000000000
+      internalID: -4358211372772476714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 3103
+        width: 61
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22291708df1953e80800000000000000
+      internalID: -8199487028590439902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 3102
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5b0eaadecd63c30800000000000000
+      internalID: 4338898204350264783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 3117
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aca2f79a17997950800000000000000
+      internalID: 6447350482031783080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 3101
+        width: 106
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd2167157a5b200a0800000000000000
+      internalID: -6916766347456802081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2909
+        width: 68
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1d07e0edbbb7f60800000000000000
+      internalID: 8033220922744820210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 2908
+        width: 104
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e120bdaf5bbd737e0800000000000000
+      internalID: -1785717152584891874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 2923
+        width: 115
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0bfde2e19020fce0800000000000000
+      internalID: -1373562075398407410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 2909
+        width: 78
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc72f5e9272c647b0800000000000000
+      internalID: -5240287318859896883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 2909
+        width: 80
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f44eaa94ba96150800000000000000
+      internalID: 5866408322514833261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 2717
+        width: 77
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b04c77e82366a2c60800000000000000
+      internalID: 7794154472442676235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 2717
+        width: 77
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a31ad7b4b488a520800000000000000
+      internalID: 2713564687204225958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 2717
+        width: 77
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bab2415e4002edc0800000000000000
+      internalID: -3611323614826939726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 2717
+        width: 80
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51c12cabf1bb003b0800000000000000
+      internalID: -5548228995968787435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 2717
+        width: 80
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4e80cd71b606830800000000000000
+      internalID: 4062364614108177628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 2525
+        width: 78
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800d8fc2c10deaeb0800000000000000
+      internalID: -4706595741123424248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 2525
+        width: 78
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c81bec22608c1b640800000000000000
+      internalID: 5094072582212071820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 2525
+        width: 78
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9dd9e6f9702e610800000000000000
+      internalID: 1648888794908055978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 2508
+        width: 84
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b409683c5895a60800000000000000
+      internalID: 7663303315770329915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 2520
+        width: 84
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed7e11a25bde2b20800000000000000
+      internalID: 3111665540496522722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 2335
+        width: 98
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f03cfb5a583e96c0800000000000000
+      internalID: -4134805447138070280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 2335
+        width: 98
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152c42a138e542da0800000000000000
+      internalID: -5970543288814091695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 2340
+        width: 99
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d44c09f4f013d70800000000000000
+      internalID: 9021008363005431127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 2340
+        width: 99
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ffef8224d3e62060800000000000000
+      internalID: 6928475577008517112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 2326
+        width: 83
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34a14fa1dabed820800000000000000
+      internalID: 2944996616098128959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 2134
+        width: 83
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf28d6c56722bed0800000000000000
+      internalID: -2399812333353816114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 2132
+        width: 84
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b809b559bac3d4d70800000000000000
+      internalID: 9028939535590592651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 2131
+        width: 73
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae4eb9f3438c09c10800000000000000
+      internalID: 2058365156439352554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 2131
+        width: 73
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a6410d947397ac0800000000000000
+      internalID: -3856990815702979963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 2131
+        width: 75
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c540eb273d2a840800000000000000
+      internalID: 5233978206725626887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1938
+        width: 72
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f413dcf043dddfd0800000000000000
+      internalID: -2315462357325507342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1942
+        width: 66
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d8356019e3695300800000000000000
+      internalID: 241333907694631122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1942
+        width: 66
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17bedcd5f23cbac70800000000000000
+      internalID: 8983488489925241713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1942
+        width: 66
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf6618d3bd4797b0800000000000000
+      internalID: -5217616208465596478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 1942
+        width: 66
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c05e75c9e7b599ac0800000000000000
+      internalID: -3847943807264365300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1750
+        width: 66
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24bfbbfd09450be0800000000000000
+      internalID: -1511721775505886163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1750
+        width: 66
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182b1df9e44fbe450800000000000000
+      internalID: 6119253137238897281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 1757
+        width: 78
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c69ba48170e0be90800000000000000
+      internalID: -7011857841654098235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1757
+        width: 80
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38ed3e11312134e0800000000000000
+      internalID: -2003783864358672324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1756
+        width: 53
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73813ad8b5f70df0800000000000000
+      internalID: -213932282993343618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1564
+        width: 53
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f02be32046ffce0800000000000000
+      internalID: -1369265800892772463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 1564
+        width: 53
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b140c4f3a5ba6a0800000000000000
+      internalID: -6436952014491215047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1564
+        width: 53
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89f424faed632600800000000000000
+      internalID: 442318044298279311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1566
+        width: 62
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fae0f11c2dc6ec40800000000000000
+      internalID: 5541341980689230581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1566
+        width: 62
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a013ddd64ddc70b80800000000000000
+      internalID: -8428541865340620534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1374
+        width: 67
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216d4dca99b4be390800000000000000
+      internalID: -7788048007205431790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1374
+        width: 67
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c674ed9011216740800000000000000
+      internalID: 5143428604686005959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1374
+        width: 67
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e93ec23e09eb08d0800000000000000
+      internalID: -2878951289582110233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1374
+        width: 112
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1838a5f6ef2e0b50800000000000000
+      internalID: 6561234376135817246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1376
+        width: 121
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541af6a383549a4b0800000000000000
+      internalID: -5428731768017542843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1184
+        width: 121
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5db20d3d7b5ae3460800000000000000
+      internalID: 7223393061300087765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1184
+        width: 121
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ebafadfc0e36b20800000000000000
+      internalID: 3126589749661974114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1167
+        width: 84
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c206754c522a3a7b0800000000000000
+      internalID: -5214145660473352148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 1167
+        width: 84
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e14b9a297d61c7b0800000000000000
+      internalID: -5205759327090294299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 975
+        width: 84
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8291801fa8fdb1140800000000000000
+      internalID: 4691589224678824232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 975
+        width: 84
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a536c8e753ed8f180800000000000000
+      internalID: -9081264327254842534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 974
+        width: 98
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26ad443de12b5db0800000000000000
+      internalID: -4802207274992032210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 974
+        width: 98
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c019b384410adb80800000000000000
+      internalID: -8369375563735297851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 974
+        width: 98
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0366b192bf0497ad0800000000000000
+      internalID: -2704058653788641744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 782
+        width: 99
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 576251d52bb0c61a0800000000000000
+      internalID: -6815059275424651659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 782
+        width: 99
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee6618a7b3130680800000000000000
+      internalID: -8790160368177090848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 782
+        width: 99
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba21102f71fae7c20800000000000000
+      internalID: 3206192502113637035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 782
+        width: 99
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8730674b2c94c6bc0800000000000000
+      internalID: -3788572085925313672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 798
+        width: 86
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a6b09737135f3f0800000000000000
+      internalID: -867732981177161147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 606
+        width: 88
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3f214e3efed87c0800000000000000
+      internalID: -4067331126382627885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 606
+        width: 88
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045f5b356c7b181b0800000000000000
+      internalID: -5656037594564790976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 605
+        width: 77
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6eb93bb26d2bc6c0800000000000000
+      internalID: -4122151131856388500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 605
+        width: 77
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b0ca0ce8c9e7ee0800000000000000
+      internalID: -1261398708685370533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 605
+        width: 80
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4669411fea16c90800000000000000
+      internalID: -7178263980596108096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_70
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 413
+        width: 80
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5b20346955c3a10800000000000000
+      internalID: 1890480047446472146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_71
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 413
+        width: 78
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86da1bbf7674fc750800000000000000
+      internalID: 6327354513408765288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_72
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 413
+        width: 78
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60881a7d8f7b122a0800000000000000
+      internalID: -6763922885936314362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_73
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 413
+        width: 109
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ed1929f98e05960800000000000000
+      internalID: 7588821144175763041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_74
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 413
+        width: 109
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50afae6e054ca6af0800000000000000
+      internalID: -402293364945651195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_75
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 221
+        width: 133
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f0d8283b48504a0800000000000000
+      internalID: -6627745370081521908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_76
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 221
+        width: 146
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1992a69c5848420800000000000000
+      internalID: 2631375182407242177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_79
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 221
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6a11e04c92d117d0800000000000000
+      internalID: -2949344712405738898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_80
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 222
+        width: 127
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0199ad3292a2d420800000000000000
+      internalID: 2653361879458091276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_81
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 221
+        width: 133
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c711cda9d943af0800000000000000
+      internalID: -417535576995955662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_87
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 29
+        width: 135
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9137935eb7bf210800000000000000
+      internalID: 1367823136278649295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_89
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 29
+        width: 138
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef590978184221d40800000000000000
+      internalID: 5553541429245023742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_91
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 29
+        width: 136
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef515e1f0824890b0800000000000000
+      internalID: -5721750204992645634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_77
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 3099
+        width: 98
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9725df0ef972764fa04a1179d5fce2c
+      internalID: -3985704231626323573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_78
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1184
+        width: 121
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378c657419e719d478f0d926ccb40989
+      internalID: -8739196557221392755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 343f4f587df61aa4c87e61864d6b1f71
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Fuyuhiko_Sprite_sheet_0: -4358211372772476714
+      Fuyuhiko_Sprite_sheet_1: -8199487028590439902
+      Fuyuhiko_Sprite_sheet_10: 7794154472442676235
+      Fuyuhiko_Sprite_sheet_11: 2713564687204225958
+      Fuyuhiko_Sprite_sheet_12: -3611323614826939726
+      Fuyuhiko_Sprite_sheet_13: -5548228995968787435
+      Fuyuhiko_Sprite_sheet_14: 4062364614108177628
+      Fuyuhiko_Sprite_sheet_15: -4706595741123424248
+      Fuyuhiko_Sprite_sheet_16: 5094072582212071820
+      Fuyuhiko_Sprite_sheet_17: 1648888794908055978
+      Fuyuhiko_Sprite_sheet_18: 7663303315770329915
+      Fuyuhiko_Sprite_sheet_19: 3111665540496522722
+      Fuyuhiko_Sprite_sheet_2: 4338898204350264783
+      Fuyuhiko_Sprite_sheet_20: -4134805447138070280
+      Fuyuhiko_Sprite_sheet_21: -5970543288814091695
+      Fuyuhiko_Sprite_sheet_22: 9021008363005431127
+      Fuyuhiko_Sprite_sheet_23: 6928475577008517112
+      Fuyuhiko_Sprite_sheet_24: 2944996616098128959
+      Fuyuhiko_Sprite_sheet_25: -2399812333353816114
+      Fuyuhiko_Sprite_sheet_26: 9028939535590592651
+      Fuyuhiko_Sprite_sheet_27: 2058365156439352554
+      Fuyuhiko_Sprite_sheet_28: -3856990815702979963
+      Fuyuhiko_Sprite_sheet_29: 5233978206725626887
+      Fuyuhiko_Sprite_sheet_3: 6447350482031783080
+      Fuyuhiko_Sprite_sheet_30: -2315462357325507342
+      Fuyuhiko_Sprite_sheet_31: 241333907694631122
+      Fuyuhiko_Sprite_sheet_32: 8983488489925241713
+      Fuyuhiko_Sprite_sheet_33: -5217616208465596478
+      Fuyuhiko_Sprite_sheet_34: -3847943807264365300
+      Fuyuhiko_Sprite_sheet_35: -1511721775505886163
+      Fuyuhiko_Sprite_sheet_36: 6119253137238897281
+      Fuyuhiko_Sprite_sheet_37: -7011857841654098235
+      Fuyuhiko_Sprite_sheet_38: -2003783864358672324
+      Fuyuhiko_Sprite_sheet_39: -213932282993343618
+      Fuyuhiko_Sprite_sheet_4: -6916766347456802081
+      Fuyuhiko_Sprite_sheet_40: -1369265800892772463
+      Fuyuhiko_Sprite_sheet_41: -6436952014491215047
+      Fuyuhiko_Sprite_sheet_42: 442318044298279311
+      Fuyuhiko_Sprite_sheet_43: 5541341980689230581
+      Fuyuhiko_Sprite_sheet_44: -8428541865340620534
+      Fuyuhiko_Sprite_sheet_45: -7788048007205431790
+      Fuyuhiko_Sprite_sheet_46: 5143428604686005959
+      Fuyuhiko_Sprite_sheet_47: -2878951289582110233
+      Fuyuhiko_Sprite_sheet_48: 6561234376135817246
+      Fuyuhiko_Sprite_sheet_49: -5428731768017542843
+      Fuyuhiko_Sprite_sheet_5: 8033220922744820210
+      Fuyuhiko_Sprite_sheet_50: 7223393061300087765
+      Fuyuhiko_Sprite_sheet_51: 3126589749661974114
+      Fuyuhiko_Sprite_sheet_52: -9088376814205404435
+      Fuyuhiko_Sprite_sheet_53: -5214145660473352148
+      Fuyuhiko_Sprite_sheet_54: -5205759327090294299
+      Fuyuhiko_Sprite_sheet_55: 4691589224678824232
+      Fuyuhiko_Sprite_sheet_56: -9081264327254842534
+      Fuyuhiko_Sprite_sheet_57: -4802207274992032210
+      Fuyuhiko_Sprite_sheet_58: -8369375563735297851
+      Fuyuhiko_Sprite_sheet_59: -2704058653788641744
+      Fuyuhiko_Sprite_sheet_6: -1785717152584891874
+      Fuyuhiko_Sprite_sheet_60: -6815059275424651659
+      Fuyuhiko_Sprite_sheet_61: -8790160368177090848
+      Fuyuhiko_Sprite_sheet_62: 3206192502113637035
+      Fuyuhiko_Sprite_sheet_63: -3788572085925313672
+      Fuyuhiko_Sprite_sheet_64: -867732981177161147
+      Fuyuhiko_Sprite_sheet_65: -4067331126382627885
+      Fuyuhiko_Sprite_sheet_66: -5656037594564790976
+      Fuyuhiko_Sprite_sheet_67: -4122151131856388500
+      Fuyuhiko_Sprite_sheet_68: -1261398708685370533
+      Fuyuhiko_Sprite_sheet_69: -7178263980596108096
+      Fuyuhiko_Sprite_sheet_7: -1373562075398407410
+      Fuyuhiko_Sprite_sheet_70: 1890480047446472146
+      Fuyuhiko_Sprite_sheet_71: 6327354513408765288
+      Fuyuhiko_Sprite_sheet_72: -6763922885936314362
+      Fuyuhiko_Sprite_sheet_73: 7588821144175763041
+      Fuyuhiko_Sprite_sheet_74: -402293364945651195
+      Fuyuhiko_Sprite_sheet_75: -6627745370081521908
+      Fuyuhiko_Sprite_sheet_76: 2631375182407242177
+      Fuyuhiko_Sprite_sheet_77: -3985704231626323573
+      Fuyuhiko_Sprite_sheet_78: -8739196557221392755
+      Fuyuhiko_Sprite_sheet_79: -2949344712405738898
+      Fuyuhiko_Sprite_sheet_8: -5240287318859896883
+      Fuyuhiko_Sprite_sheet_80: 2653361879458091276
+      Fuyuhiko_Sprite_sheet_81: -417535576995955662
+      Fuyuhiko_Sprite_sheet_82: -1340405672756670254
+      Fuyuhiko_Sprite_sheet_83: 8012728444350355628
+      Fuyuhiko_Sprite_sheet_84: -5526301174801104317
+      Fuyuhiko_Sprite_sheet_85: 4037780647948243517
+      Fuyuhiko_Sprite_sheet_86: -129057494464546991
+      Fuyuhiko_Sprite_sheet_87: 1367823136278649295
+      Fuyuhiko_Sprite_sheet_88: -1245763932370137550
+      Fuyuhiko_Sprite_sheet_89: 5553541429245023742
+      Fuyuhiko_Sprite_sheet_9: 5866408322514833261
+      Fuyuhiko_Sprite_sheet_90: -3789950825897988784
+      Fuyuhiko_Sprite_sheet_91: -5721750204992645634
+      Fuyuhiko_Sprite_sheet_92: 8964172403281670170
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
