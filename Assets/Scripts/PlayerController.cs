@@ -3,13 +3,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movimiento")]
-    public float moveSpeed;
+    [SerializeField]
+    private float moveSpeed;
 
     [Header("Salto")]
-    public float jumpForce;
-    public Transform groundCheck; 
-    public float groundRadius = 0.15f;
-    public LayerMask groundLayer;  
+    [SerializeField]
+    private float jumpForce;
+    public GroundSensor groundSensor;  
 
     private Rigidbody2D rb;
     private float moveInput;
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+        isGrounded = groundSensor.isGrounded;
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
