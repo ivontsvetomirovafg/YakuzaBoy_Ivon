@@ -3,13 +3,18 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movimiento")]
-    [SerializeField]
+    [SerializeField] 
     private float moveSpeed;
 
     [Header("Salto")]
-    [SerializeField]
+    [SerializeField] 
     private float jumpForce;
-    public GroundSensor groundSensor;  
+    [SerializeField] 
+    private float groundDistance = 0.2f;
+
+    [Header("Animacion")]
+    [SerializeField] 
+    private Animator animator;
 
     private Rigidbody2D rb;
     private float moveInput;
@@ -23,12 +28,31 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
-        isGrounded = groundSensor.isGrounded;
+
+        if (moveInput == 0)
+        {
+            animator.SetBool("Run", false);
+        }
+        else
+        {
+            animator.SetBool("Run", true);
+        }
+
+        if (moveInput < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else if (moveInput > 0)
+        {
+            transform.eulerAngles = Vector3.zero;
+        }
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             Jump();
         }
+
+        CheckGrounded();
     }
 
     void FixedUpdate()
@@ -40,5 +64,28 @@ public class PlayerController : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    }
+
+    void CheckGrounded()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, groundDistance);
+        isGrounded = false;
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].transform.CompareTag("Ground"))
+            {
+                isGrounded = true;
+            }
+        }
+
+        if (isGrounded == true)
+        {
+            animator.SetBool("Jump", false);
+        }
+        else
+        {
+            animator.SetBool("Jump", true);
+        }
     }
 }
