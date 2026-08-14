@@ -965,6 +965,7 @@ GameObject:
   - component: {fileID: 889832829}
   - component: {fileID: 889832831}
   - component: {fileID: 889832830}
+  - component: {fileID: 889832832}
   m_Layer: 0
   m_Name: Fuyuhiko
   m_TagString: Untagged
@@ -1001,11 +1002,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  maxLife: 100
+  currentLife: 100
   jumpForce: 5
   groundDistance: 0.2
   doubleJump: 1
   doubleJumpCooldown: 1
-  wallSlideSpeed: 1
+  wallJumpForceX: 4
+  wallJumpForceY: 6
+  wallJumpDuration: 0.08
+  baseDamage: 0
+  damage: 0
+  bulletPrefab: {fileID: 4603315630479471595, guid: ac6eda27eb9535f4ab0c73399804de7c, type: 3}
+  firePoint: {fileID: 1358087401}
+  fireRate: 0.3
   animator: {fileID: 93313984}
 --- !u!50 &889832830
 Rigidbody2D:
@@ -1071,6 +1081,34 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 1.2915113}
   m_Size: {x: 1.5600001, y: 2.5905938}
   m_Direction: 0
+--- !u!114 &889832832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889832827}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82c7280f6174cc4a803f6fd41e36459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  maxLife: 100
+  currentLife: 100
+  jumpForce: 5
+  groundDistance: 0.2
+  doubleJump: 1
+  doubleJumpCooldown: 1
+  wallJumpForceX: 4
+  wallJumpForceY: 6
+  wallJumpDuration: 0.25
+  baseDamage: 0
+  damage: 0
+  bulletPrefab: {fileID: 4603315630479471595, guid: ac6eda27eb9535f4ab0c73399804de7c, type: 3}
+  firePoint: {fileID: 1358087401}
+  fireRate: 0.3
+  animator: {fileID: 93313984}
 --- !u!1 &920583706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,6 +1417,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1385931296}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1358087400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1358087401}
+  m_Layer: 0
+  m_Name: GunSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1358087401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358087400}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.05, y: 0.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 93313989}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1385931295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,7 +1716,10 @@ PrefabInstance:
     - {fileID: 4782612900983735797, guid: 436e245ff77853847bde9affb05f29eb, type: 3}
     - {fileID: 8365249936702909428, guid: 436e245ff77853847bde9affb05f29eb, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 929588683288638321, guid: 436e245ff77853847bde9affb05f29eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1358087401}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 436e245ff77853847bde9affb05f29eb, type: 3}
 --- !u!1660057539 &9223372036854775807
