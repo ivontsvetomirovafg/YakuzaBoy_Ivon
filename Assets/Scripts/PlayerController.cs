@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [Header("Vida")]
     public float maxLife;
     public float currentLife;
+    public bool isDead = false; 
 
     [Header("Salto")]
     [SerializeField] 
@@ -34,7 +37,16 @@ public class PlayerController : MonoBehaviour
     private bool isWallStuck;
     private Vector2 wallNormal;
     private float wallJumpTimer;
+    
+    [Header("Agachar")]
+    [SerializeField]
+    private float radioDetectTecho;  
+    [SerializeField]
+    private Vector2 desplazamientoDetectTecho;      
 
+    private bool techoBloqueado;              
+    private bool isCrouching;
+    
     [Header("Ataque")]
     public float baseDamage;
     public float damage;
@@ -53,6 +65,12 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
     private bool isGrounded;
 
+    [Header("UI")]
+    [SerializeField]
+    private Image lifeBar;
+    /*[SerializeField]
+    private GameObject gameOverPanel;*/
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -63,7 +81,6 @@ public class PlayerController : MonoBehaviour
         damage = baseDamage;
 
         UpdateLife();
-        UpdateDamage();
     }
 
     void Update()
@@ -136,6 +153,7 @@ public class PlayerController : MonoBehaviour
         }
         Attack();
         CheckGrounded();
+        CheckCrouch(); 
 
         if (wallJumpTimer > 0f)
         {
@@ -220,7 +238,22 @@ public class PlayerController : MonoBehaviour
     public void TakePlayerDamage(float _damage)
     {
         currentLife -= _damage;
+        if (currentLife <= 0)
+        {
+            Die();
+        }
         UpdateLife();
+        animator.SetTrigger("Hit");
+    }
+
+    private void Die()
+    {
+        animator.SetTrigger("Death");
+        isDead = true;
+        rb.linearVelocity = Vector2.zero;
+        //gameOverPanel.SetActive(true);
+        //AudioManager.Instance.PlaySFX(deathSound);
+        enabled = false;
     }
 
     // SALTO //
@@ -242,6 +275,46 @@ public class PlayerController : MonoBehaviour
         wallJumpTimer = wallJumpDuration;
         animator.SetTrigger("JumpStart");
     }
+
+    // AGACHAR //
+
+    void CheckCrouch()
+    {
+        Vector2 checkPosition = (Vector2)transform.position + desplazamientoDetectTecho;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(checkPosition, radioDetectTecho);
+        techoBloqueado = false;
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].CompareTag("Wall"))
+            {
+                techoBloqueado = true;
+            }
+        }
+
+        bool wantsToCrouch = Input.GetKey(KeyCode.LeftControl);
+
+        if (wantsToCrouch == true || techoBloqueado == true)
+        {
+            isCrouching = true;
+        }
+        else
+        {
+            isCrouching = false;
+        }
+
+        animator.SetBool("Agachar", isCrouching);
+
+        if (isCrouching == true && moveInput == 0)
+        {
+            animator.speed = 0f;
+        }
+        else
+        {
+            animator.speed = 1f;
+        }
+    }
+    //
 
     void CheckGrounded()
     {
@@ -268,12 +341,6 @@ public class PlayerController : MonoBehaviour
 
     public void UpdateLife()
     {
-        //lifeBar.fillAmount = currentLife / maxLife;
-        //lifeText.text = "LIFE: " + currentLife + " / " + maxLife;      
-    }
-
-    public void UpdateDamage()
-    {
-        //damageText.text = "DMG: " + damage;
+        lifeBar.fillAmount = currentLife / maxLife;
     }
 }

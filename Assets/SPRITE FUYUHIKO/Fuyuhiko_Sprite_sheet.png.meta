@@ -1325,10 +1325,10 @@ TextureImporter:
       name: Fuyuhiko_Sprite_sheet_43
       rect:
         serializedVersion: 2
-        x: 608
-        y: 1566
-        width: 62
-        height: 109
+        x: 801
+        y: 1567
+        width: 61
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1347,10 +1347,10 @@ TextureImporter:
       name: Fuyuhiko_Sprite_sheet_44
       rect:
         serializedVersion: 2
-        x: 800
-        y: 1566
-        width: 62
-        height: 109
+        x: 802
+        y: 1376
+        width: 119
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1369,10 +1369,10 @@ TextureImporter:
       name: Fuyuhiko_Sprite_sheet_45
       rect:
         serializedVersion: 2
-        x: 31
-        y: 1374
-        width: 67
-        height: 99
+        x: 611
+        y: 1375
+        width: 110
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1391,10 +1391,10 @@ TextureImporter:
       name: Fuyuhiko_Sprite_sheet_46
       rect:
         serializedVersion: 2
-        x: 223
-        y: 1374
-        width: 67
-        height: 99
+        x: 416
+        y: 1375
+        width: 65
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1413,10 +1413,10 @@ TextureImporter:
       name: Fuyuhiko_Sprite_sheet_47
       rect:
         serializedVersion: 2
-        x: 415
-        y: 1374
-        width: 67
-        height: 99
+        x: 224
+        y: 1375
+        width: 65
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1435,10 +1435,10 @@ TextureImporter:
       name: Fuyuhiko_Sprite_sheet_48
       rect:
         serializedVersion: 2
-        x: 610
-        y: 1374
-        width: 112
-        height: 99
+        x: 32
+        y: 1375
+        width: 65
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1449,72 +1449,6 @@ TextureImporter:
       bones: []
       spriteID: e1838a5f6ef2e0b50800000000000000
       internalID: 6561234376135817246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fuyuhiko_Sprite_sheet_49
-      rect:
-        serializedVersion: 2
-        x: 801
-        y: 1376
-        width: 121
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 541af6a383549a4b0800000000000000
-      internalID: -5428731768017542843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fuyuhiko_Sprite_sheet_50
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 1184
-        width: 121
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5db20d3d7b5ae3460800000000000000
-      internalID: 7223393061300087765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fuyuhiko_Sprite_sheet_51
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 1184
-        width: 121
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 26ebafadfc0e36b20800000000000000
-      internalID: 3126589749661974114
       vertices: []
       indices: 
       edges: []
@@ -2202,13 +2136,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fuyuhiko_Sprite_sheet_78
+      name: Fuyuhiko_Sprite_sheet_52
       rect:
         serializedVersion: 2
-        x: 33
-        y: 1184
-        width: 121
-        height: 98
+        x: 609
+        y: 1567
+        width: 60
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2217,8 +2151,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 378c657419e719d478f0d926ccb40989
-      internalID: -8739196557221392755
+      spriteID: ccdb809962a5bb84ebb343d192683210
+      internalID: -9088376814205404435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1184
+        width: 119
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a872fc9da35a2b49b1b25060f8da6d4
+      internalID: -5428731768017542843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1184
+        width: 119
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404d93f77a6d31f4b867da845f5b1c95
+      internalID: 7223393061300087765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuyuhiko_Sprite_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1184
+        width: 119
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac20f709b68da584d9ffd8eba07b7411
+      internalID: 3126589749661974114
       vertices: []
       indices: 
       edges: []

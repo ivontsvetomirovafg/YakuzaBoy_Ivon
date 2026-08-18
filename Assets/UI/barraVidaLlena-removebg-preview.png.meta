@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e0c1206cbbfd03d45ad85605aa8a6e86
+guid: e036024d5a339ff4a95d8b8679cd64bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1851984568780116076
-    second: FONDO_0
+      213: -4221296676533129125
+    second: barraVidaLlena-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 55
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,45 +100,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FONDO_0
+      name: barraVidaLlena-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2164
-        height: 521
+        x: 15
+        y: 16
+        width: 122
+        height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 412, z: 1913, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49f2b50d8dd6c46e0800000000000000
-      internalID: -1851984568780116076
+      spriteID: b50b4bfb901fa65c0800000000000000
+      internalID: -4221296676533129125
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap_0
+      name: barraVidaLlena-removebg-preview_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 411
-        width: 252
-        height: 110
+        x: 137
+        y: 16
+        width: 357
+        height: 129
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 636f3173feefb614aa68f05db57948ca
-      internalID: 1528337424
+      spriteID: cae58dd2cada67a4a9299c22e120d167
+      internalID: 386989020
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e091d84f5b7e8024dbe8736ea9cf86d2
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +157,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FONDO_0: -1851984568780116076
-      TileMap_0: 1528337424
+      barraVidaLlena-removebg-preview_0: -4221296676533129125
+      barraVidaLlena-removebg-preview_1: 386989020
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
