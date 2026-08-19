@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour
@@ -12,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public float maxLife;
     public float currentLife;
     public bool isDead = false; 
+    [SerializeField] 
+    private int killCount;
 
     [Header("Salto")]
     [SerializeField] 
@@ -48,7 +51,6 @@ public class PlayerController : MonoBehaviour
     private bool isCrouching;
     
     [Header("Ataque")]
-    public float baseDamage;
     public float damage;
 
     [Header("Disparo")]
@@ -68,8 +70,10 @@ public class PlayerController : MonoBehaviour
     [Header("UI")]
     [SerializeField]
     private Image lifeBar;
-    /*[SerializeField]
-    private GameObject gameOverPanel;*/
+    [SerializeField]
+    private Text killsText; 
+
+    private LevelManager levelManager; 
 
     void Awake()
     {
@@ -78,9 +82,16 @@ public class PlayerController : MonoBehaviour
     
     private void Start()
     {
-        damage = baseDamage;
-
         UpdateLife();
+
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        killCount = PlayerPrefs.GetInt("KillCount", 0); //Guarda datos entre partidas.
+        UpdateKillCount();
+
+        if (levelManager.spawnPoint != null)
+        {
+            transform.position = levelManager.spawnPoint.position;
+        }
     }
 
     void Update()
@@ -237,23 +248,43 @@ public class PlayerController : MonoBehaviour
 
     public void TakePlayerDamage(float _damage)
     {
+        if (isDead == true)
+        {
+            return; 
+        }
+
         currentLife -= _damage;
+        UpdateLife();
+
         if (currentLife <= 0)
         {
             Die();
         }
-        UpdateLife();
-        animator.SetTrigger("Hit");
+        else
+        {
+            animator.SetTrigger("Hit");
+        }
     }
 
     private void Die()
     {
-        animator.SetTrigger("Death");
         isDead = true;
         rb.linearVelocity = Vector2.zero;
-        //gameOverPanel.SetActive(true);
-        //AudioManager.Instance.PlaySFX(deathSound);
-        enabled = false;
+        animator.SetTrigger("Death");
+        enabled = false; 
+
+        StartCoroutine(Respawn());
+    }
+
+    private IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(3f); 
+
+        killCount++;
+        PlayerPrefs.SetInt("KillCount", killCount);
+        PlayerPrefs.Save();
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 
     // SALTO //
@@ -342,5 +373,10 @@ public class PlayerController : MonoBehaviour
     public void UpdateLife()
     {
         lifeBar.fillAmount = currentLife / maxLife;
+    }
+
+    public void UpdateKillCount()
+    {
+        killsText.text = "x" + killCount.ToString();
     }
 }

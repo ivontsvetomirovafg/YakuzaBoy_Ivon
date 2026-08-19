@@ -10,10 +10,10 @@ public class EnemyController : MonoBehaviour
     public float stopDistance;
 
     [Header("Vida")]
-    public float maxLife;
-    public float currentLife;
+    public int maxLife = 3;
+    public int currentLife;
     [SerializeField]
-    private Image lifeBar;
+    private GameObject[] hearts;
 
     [Header("Ataque")]
     public float damage;          
@@ -41,7 +41,6 @@ public class EnemyController : MonoBehaviour
         playerController = playerObj.GetComponent<PlayerController>();
 
         currentLife = maxLife;
-        UpdateLife();
     }
 
     void Update()
@@ -166,13 +165,31 @@ public class EnemyController : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
-        currentLife -= _damage;
-        UpdateLife();
-        animator.SetTrigger("Hit");
+        currentLife--;
+        UpdateHearts();
 
         if (currentLife <= 0)
         {
             Die();
+        }
+        else
+        {
+            animator.SetTrigger("Hit");
+        }
+    }
+
+    void UpdateHearts()
+    {
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < currentLife)
+            {
+                hearts[i].SetActive(true);
+            }
+            else
+            {
+                hearts[i].SetActive(false);
+            }
         }
     }
 
@@ -181,11 +198,7 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger("Hit");
         rb.linearVelocity = Vector2.zero;
         this.enabled = false;
-        Destroy(gameObject);
-    }
 
-    public void UpdateLife()
-    {
-        lifeBar.fillAmount = currentLife / maxLife;
+        Destroy(gameObject, 0.5f);
     }
 }
