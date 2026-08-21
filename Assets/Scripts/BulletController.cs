@@ -35,6 +35,16 @@ public class BulletController : MonoBehaviour
             }
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            ShifuController shifu = collision.gameObject.GetComponent<ShifuController>();
+            if (shifu != null)
+            {
+                shifu.TakeDamage(damage);
+            }
+            Destroy(gameObject);
+        }
         else if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Wall"))
         {
             Destroy(gameObject); 
