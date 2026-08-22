@@ -53,6 +53,9 @@ public class PlayerController : MonoBehaviour
     [Header("Ataque")]
     public float damage;
 
+    //enemiigo que relentiza: 
+    private int slowHits;
+
     [Header("Disparo")]
     public GameObject bulletPrefab;
     public Transform firePoint;   
@@ -244,6 +247,37 @@ public class PlayerController : MonoBehaviour
             direction = Vector2.left;
         }        
         bullet.SetDirection(direction);
+    }
+
+    public void SlowHit(float slowMultiplier, float slowDuration)
+    {
+        if (isDead == true)
+        {
+            return;
+        }
+
+        slowHits++;
+
+        if (slowHits < 3)
+        {
+            StartCoroutine(SlowEffect(slowMultiplier, slowDuration));
+            animator.SetTrigger("Hit");
+        }
+        else
+        {
+            currentLife = 0;
+            Die();
+        }
+    }
+
+    private IEnumerator SlowEffect(float slowMultiplier, float slowDuration)
+    {
+        float originalSpeed = moveSpeed;
+        moveSpeed = moveSpeed * slowMultiplier;
+
+        yield return new WaitForSeconds(slowDuration);
+
+        moveSpeed = originalSpeed;
     }
 
     public void TakePlayerDamage(float _damage)

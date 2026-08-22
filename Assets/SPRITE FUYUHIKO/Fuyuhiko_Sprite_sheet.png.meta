@@ -556,9 +556,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 628
-        y: 2909
+        y: 2905
         width: 78
-        height: 123
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -578,9 +578,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 820
-        y: 2909
+        y: 2910
         width: 80
-        height: 114
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -600,9 +600,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 55
-        y: 2717
+        y: 2718
         width: 77
-        height: 111
+        height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,9 +622,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 247
-        y: 2717
+        y: 2718
         width: 77
-        height: 111
+        height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,10 +643,10 @@ TextureImporter:
       name: Fuyuhiko_Sprite_sheet_12
       rect:
         serializedVersion: 2
-        x: 439
-        y: 2717
-        width: 77
-        height: 111
+        x: 438
+        y: 2718
+        width: 79
+        height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -666,9 +666,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 629
-        y: 2717
+        y: 2718
         width: 80
-        height: 115
+        height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -688,9 +688,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 820
-        y: 2717
+        y: 2718
         width: 80
-        height: 114
+        height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -710,9 +710,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 52
-        y: 2525
+        y: 2526
         width: 78
-        height: 123
+        height: 130
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -734,7 +734,7 @@ TextureImporter:
         x: 244
         y: 2525
         width: 78
-        height: 123
+        height: 131
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,7 +756,7 @@ TextureImporter:
         x: 436
         y: 2525
         width: 78
-        height: 123
+        height: 131
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

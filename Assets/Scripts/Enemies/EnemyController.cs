@@ -12,30 +12,30 @@ public class EnemyController : MonoBehaviour
     [Header("Vida")]
     public int maxLife = 3;
     public int currentLife;
-    [SerializeField]
-    private GameObject[] hearts;
+    public GameObject[] hearts;
 
     [Header("Ataque")]
-    public float damage;          
+    public float damage;
     public float attackCooldown;
-    private float attackTime;
-    private bool attacking;
-    private bool alterao; 
+    public float attackTime;
+    public bool attacking;
+    public bool alterao;
 
     [Header("Animacion")]
     public Animator animator;
 
-    private Rigidbody2D rb;
-    private Transform player;
-    private PlayerController playerController;
-    private bool playerDetected;
+    public Rigidbody2D rb;
+    public Transform player;
+    public PlayerController playerController;
+    public bool playerDetected;
+    public bool yellowNinja = false; 
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Start()
+    public void Start()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         playerController = playerObj.GetComponent<PlayerController>();
@@ -43,7 +43,7 @@ public class EnemyController : MonoBehaviour
         currentLife = maxLife;
     }
 
-    void Update()
+    public void Update()
     {
         if (currentLife <= 0)
         {
@@ -195,10 +195,23 @@ public class EnemyController : MonoBehaviour
 
     void Die()
     {
-        animator.SetTrigger("Hit");
-        rb.linearVelocity = Vector2.zero;
-        this.enabled = false;
+        if (yellowNinja == true)
+        {
+            animator.SetTrigger("Death");
+            rb.linearVelocity = Vector2.zero;
+            this.enabled = false;
 
-        Destroy(gameObject, 0.5f);
+            Destroy(gameObject, 1.5f);
+        }
+
+        else 
+        {
+            animator.SetTrigger("Hit");
+            rb.linearVelocity = Vector2.zero;
+            this.enabled = false;
+
+            Destroy(gameObject, 0.5f);
+        }
+        
     }
 }
