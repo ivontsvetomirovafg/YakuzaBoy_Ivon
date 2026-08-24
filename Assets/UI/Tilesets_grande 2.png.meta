@@ -1,0 +1,196 @@
+fileFormatVersion: 2
+guid: dbdda120c68d47744ad84d0c9d80bffa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4646246566829988358
+    second: Tilesets_grande 1_0
+  - first:
+      213: -3900861533573671901
+    second: Tilesets_grande 1_1
+  - first:
+      213: -4657499244812947017
+    second: Tilesets_grande 1_2
+  - first:
+      213: 6093439563822302346
+    second: Tilesets_grande 1_3
+  - first:
+      213: 5072774709789887995
+    second: Tilesets_grande 1_4
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 55
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tilesets_grande 2_6
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 228
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1106d1317cf0b8479dc3b4085668fec
+      internalID: 614782414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets_grande 2_7
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 228
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499e274b72a30ca49ac7d188ad57ae0b
+      internalID: 1652973388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 76f0f501d3d04d1489bcb65fe2d0053e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tilesets_grande 2_0: 438578180
+      Tilesets_grande 2_1: 1832195474
+      Tilesets_grande 2_10: -462082850
+      Tilesets_grande 2_11: -1008567716
+      Tilesets_grande 2_12: -1520487691
+      Tilesets_grande 2_13: 398439151
+      Tilesets_grande 2_14: 73887920
+      Tilesets_grande 2_15: 1058711689
+      Tilesets_grande 2_16: 1851839953
+      Tilesets_grande 2_17: -1835950712
+      Tilesets_grande 2_18: -1228973533
+      Tilesets_grande 2_19: 1218105907
+      Tilesets_grande 2_2: 1218339670
+      Tilesets_grande 2_3: -610127660
+      Tilesets_grande 2_4: 914904299
+      Tilesets_grande 2_5: -574605563
+      Tilesets_grande 2_6: 614782414
+      Tilesets_grande 2_7: 1652973388
+      Tilesets_grande 2_8: -845099399
+      Tilesets_grande 2_9: -123332476
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

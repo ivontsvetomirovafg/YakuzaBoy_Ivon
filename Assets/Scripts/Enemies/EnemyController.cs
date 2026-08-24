@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
     public Transform player;
     public PlayerController playerController;
     public bool playerDetected;
-    public bool yellowNinja = false; 
+    public bool otherNinja = false; 
 
     void Awake()
     {
@@ -195,7 +195,7 @@ public class EnemyController : MonoBehaviour
 
     void Die()
     {
-        if (yellowNinja == true)
+        if (otherNinja == true)
         {
             animator.SetTrigger("Death");
             rb.linearVelocity = Vector2.zero;
