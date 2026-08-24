@@ -96,7 +96,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void CheckPlayer()
+    public void CheckPlayer()
     {
         if (alterao == true)
         {
@@ -117,7 +117,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void Chase()
+    public void Chase()
     {
         animator.SetBool("Run", true);
         Vector2 direction = (player.position - transform.position).normalized;

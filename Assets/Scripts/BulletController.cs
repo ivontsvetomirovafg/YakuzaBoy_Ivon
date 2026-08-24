@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour
     public float speed = 15f;
     public float damage;
     public float lifeTime = 5f;
+    public bool enemyBullet;
 
     private Vector2 direction;
 
@@ -26,28 +27,34 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (enemyBullet == false)
         {
-            EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
-            if (enemy != null)
+            if (collision.gameObject.CompareTag("Enemy"))
             {
-                enemy.TakeDamage(damage);
+                EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(damage);
+                }
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
-        }
-
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            ShifuController shifu = collision.gameObject.GetComponent<ShifuController>();
-            if (shifu != null)
+            else if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Wall"))
             {
-                shifu.TakeDamage(damage);
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
         }
-        else if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Wall"))
+        else
         {
-            Destroy(gameObject); 
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+                playerController.TakePlayerDamage(damage);
+                Destroy(gameObject);
+            }
+            else if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Wall"))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
