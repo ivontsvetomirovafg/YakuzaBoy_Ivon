@@ -91,14 +91,29 @@ public class PlayerController : MonoBehaviour
         killCount = PlayerPrefs.GetInt("KillCount", 0); //Guarda datos entre partidas.
         UpdateKillCount();
 
-        if (levelManager.spawnPoint != null)
+        if (PlayerPrefs.HasKey("SpawnX")) //EXPLICAR
         {
-            transform.position = levelManager.spawnPoint.position;
+            float x = PlayerPrefs.GetFloat("SpawnX");
+            float y = PlayerPrefs.GetFloat("SpawnY");
+
+            transform.position = new Vector3(x, y, transform.position.z);
         }
     }
 
     void Update()
     {
+        //TEMPORAL//
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerPrefs.DeleteKey("SpawnX");
+            PlayerPrefs.DeleteKey("SpawnY");
+            PlayerPrefs.DeleteKey("KillCount");
+            PlayerPrefs.Save();
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         if (currentLife <=0)
         {
             return;
@@ -310,15 +325,14 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(Respawn());
     }
 
-    private IEnumerator Respawn()
+    private IEnumerator Respawn() // EXPLICAR
     {
-        yield return new WaitForSeconds(3f); 
+        yield return new WaitForSeconds(2f);
 
         killCount++;
         PlayerPrefs.SetInt("KillCount", killCount);
         PlayerPrefs.Save();
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     // SALTO //
@@ -401,6 +415,19 @@ public class PlayerController : MonoBehaviour
         else
         {
             animator.SetBool("Jump", true);
+        }
+    }
+
+    // EXPLICAR --> PlayerPrefs //
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Spawn")
+        {
+            levelManager.spawnPoint = collision.transform;
+            
+            PlayerPrefs.SetFloat("SpawnX", collision.transform.position.x);
+            PlayerPrefs.SetFloat("SpawnY", collision.transform.position.y);
+            PlayerPrefs.Save();
         }
     }
 

@@ -111,7 +111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5034266407086586619
 Transform:
   m_ObjectHideFlags: 0
@@ -284,8 +284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  detectionRange: 6
-  stopDistance: 6
+  detectionRange: 5
+  stopDistance: 5
   maxLife: 3
   currentLife: 3
   hearts:
@@ -303,7 +303,7 @@ MonoBehaviour:
   playerController: {fileID: 0}
   playerDetected: 0
   otherNinja: 1
-  bulletPrefab: {fileID: 4603315630479471595, guid: 927619fb0c6b6d946a3689fb5d6f5844, type: 3}
+  bulletPrefab: {fileID: 4563671188182568362, guid: d688a27284dfd3d4391e8b18b7a786b9, type: 3}
   firePoint: {fileID: 3928029334664898592}
 --- !u!1 &3600264925253946951
 GameObject:
@@ -628,13 +628,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7042467295365778436}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -1.01, y: -1.23, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.00000065565104, w: -1}
+  m_LocalPosition: {x: 1.37, y: -1.337, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5034266407086586619}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 360}
 --- !u!1 &8117841542481953720
 GameObject:
   m_ObjectHideFlags: 0

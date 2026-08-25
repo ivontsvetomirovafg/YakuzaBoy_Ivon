@@ -105,7 +105,7 @@ public class EnemyController : MonoBehaviour
         }
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRange);
-        playerDetected = false;
+        //playerDetected = false;
 
         for (int i = 0; i < colliders.Length; i++)
         {

@@ -6,7 +6,6 @@ public class LevelManager : MonoBehaviour
 {
     [Header("Spawn")]
     public Transform spawnPoint;
-    public Transform tpPoint;
 
     [Header("Audio")]
     [SerializeField]

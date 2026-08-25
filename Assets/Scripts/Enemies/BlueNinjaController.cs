@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class BlueNinjaController : EnemyController
 {
@@ -13,8 +14,6 @@ public class BlueNinjaController : EnemyController
         base.Start();
     }
 
-    // Copia completa del Update() del padre, con la unica diferencia
-    // de que llama a SU PROPIA Attack() (definida mas abajo), no a la del padre
     void Update()
     {
         if (currentLife <= 0)
@@ -71,15 +70,20 @@ public class BlueNinjaController : EnemyController
         }
     }
 
-    // Nueva Attack(): igual que la del padre en el cooldown, pero ademas suelta el rayo
     void Attack()
     {
         if (Time.time >= attackTime + attackCooldown)
         {
             animator.SetTrigger("Attack");
-            Shoot();
             attackTime = Time.time;
+            StartCoroutine(AnimShoot());
         }
+    }
+
+    private IEnumerator AnimShoot()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Shoot();
     }
 
     void Shoot()
