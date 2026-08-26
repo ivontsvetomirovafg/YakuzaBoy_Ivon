@@ -207,6 +207,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obst"))
+        {
+            if (isDead == true)
+            {
+                return;
+            }
+
+            currentLife = 0;
+            UpdateLife();
+            Die();
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
