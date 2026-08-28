@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [Header("Movimiento")]
     [SerializeField] 
     private float moveSpeed;
+    public bool canMove = true;
 
     [Header("Vida")]
     public float maxLife;
@@ -76,6 +77,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Text killsText; 
 
+    [Header("Audio")]
+    [SerializeField]
+    private AudioClip deathSFX;
+
     private LevelManager levelManager; 
 
     void Awake()
@@ -112,6 +117,11 @@ public class PlayerController : MonoBehaviour
             PlayerPrefs.Save();
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        
+        if (canMove == false)
+        {
+            return; 
         }
 
         if (currentLife <=0)
@@ -334,6 +344,7 @@ public class PlayerController : MonoBehaviour
     {
         isDead = true;
         rb.linearVelocity = Vector2.zero;
+        AudioManager.Instance.PlaySFX(deathSFX);
         animator.SetTrigger("Death");
         enabled = false; 
 
@@ -439,10 +450,14 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Spawn")
         {
             levelManager.spawnPoint = collision.transform;
-            
+        
             PlayerPrefs.SetFloat("SpawnX", collision.transform.position.x);
             PlayerPrefs.SetFloat("SpawnY", collision.transform.position.y);
             PlayerPrefs.Save();
+        }
+        else if (collision.gameObject.tag == "Door")
+        {
+            levelManager.FinishLevel();
         }
     }
 

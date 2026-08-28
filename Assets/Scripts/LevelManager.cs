@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        //AudioManager.instance.PlayMusic(musicSong); // pendiente hasta que tenga el AudioManager hecho
+        AudioManager.Instance.PlayMusic(musicSong); 
     }
 
     void Update()

@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Spawn
   - Obst
+  - Door
   layers:
   - Default
   - TransparentFX
