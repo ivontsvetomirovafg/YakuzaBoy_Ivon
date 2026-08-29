@@ -30,6 +30,11 @@ public class EnemyController : MonoBehaviour
     public bool playerDetected;
     public bool otherNinja = false; 
 
+    [Header("Audio")]
+    public AudioClip deathSFX;
+    public AudioClip attackSFX;
+    public AudioClip hitSFX;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -138,7 +143,9 @@ public class EnemyController : MonoBehaviour
         if (Time.time >= attackTime + attackCooldown)
         {
             animator.SetTrigger("Attack");
-            attackTime = Time.time;
+            attackTime = Time.time;            
+            AudioManager.Instance.PlaySFX(attackSFX);
+
         }
     }
 
@@ -174,6 +181,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
+            AudioManager.Instance.PlaySFX(hitSFX);
             animator.SetTrigger("Hit");
         }
     }
@@ -197,6 +205,7 @@ public class EnemyController : MonoBehaviour
     {
         if (otherNinja == true)
         {
+            AudioManager.Instance.PlaySFX(deathSFX);
             animator.SetTrigger("Death");
             rb.linearVelocity = Vector2.zero;
             this.enabled = false;
@@ -206,6 +215,7 @@ public class EnemyController : MonoBehaviour
 
         else 
         {
+            AudioManager.Instance.PlaySFX(deathSFX);
             animator.SetTrigger("Hit");
             rb.linearVelocity = Vector2.zero;
             this.enabled = false;

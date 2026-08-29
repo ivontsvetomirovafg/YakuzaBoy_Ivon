@@ -13070,6 +13070,10 @@ MonoBehaviour:
   musicSong: {fileID: 8300000, guid: 3707197fc6cba4d34b207041a5112352, type: 3}
   panelPause: {fileID: 160257497}
   panelLevelCompleted: {fileID: 0}
+  pauseSFX: {fileID: 8300000, guid: 48a0c35fe8ad0fb4db00deac65040cd8, type: 3}
+  victorySFX: {fileID: 8300000, guid: 648fe9edd7326714c86fdd28ec71a0d4, type: 3}
+  spawnPointSFX: {fileID: 8300000, guid: aa8e8ebbe1048d34e82a7020678b6150, type: 3}
+  buttonSFX: {fileID: 8300000, guid: a3eb0945c25e6c44298be725c5038cf6, type: 3}
 --- !u!4 &573750039
 Transform:
   m_ObjectHideFlags: 0
@@ -13814,6 +13818,10 @@ MonoBehaviour:
   lifeBar: {fileID: 1008145899}
   killsText: {fileID: 1413384458}
   deathSFX: {fileID: 8300000, guid: 95996e98b36aa4399b5699682ae78cf7, type: 3}
+  runSFX: {fileID: 0}
+  shootSFX: {fileID: 8300000, guid: 16bd9b37760e600428def6db6fc1f13c, type: 3}
+  jumpSFX: {fileID: 8300000, guid: c7fed86fa5acd41cea21cbabc2b1439a, type: 3}
+  hitSFX: {fileID: 8300000, guid: c8f4dbec8399fc14aac7fb69d0a292c5, type: 3}
 --- !u!50 &889832830
 Rigidbody2D:
   serializedVersion: 5
@@ -19744,7 +19752,7 @@ Transform:
   m_GameObject: {fileID: 1632735819}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.87, y: 27.22, z: 0}
+  m_LocalPosition: {x: 39.78, y: 27.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20621,6 +20629,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1385931296}
     m_Modifications:
+    - target: {fileID: 5376929271147392562, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
+      propertyPath: hitSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: b8b4ee1c904a993439e3b2dd2cde697f, type: 3}
+    - target: {fileID: 5376929271147392562, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
+      propertyPath: deathSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b7ba277cf4f22047be8262032203c85, type: 3}
+    - target: {fileID: 5376929271147392562, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
+      propertyPath: attackSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 044cfef9867a8dc4c9d5749fc6926313, type: 3}
     - target: {fileID: 5417623534054858883, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.71
@@ -20682,6 +20702,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1385931296}
     m_Modifications:
+    - target: {fileID: 1128464571704813141, guid: f8986887b8eb2ac46872d1177ed2ee9a, type: 3}
+      propertyPath: hitSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: b99080dfa5ac75c4d80176a62d47030b, type: 3}
+    - target: {fileID: 1128464571704813141, guid: f8986887b8eb2ac46872d1177ed2ee9a, type: 3}
+      propertyPath: deathSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 2008c919a13640942adc2f206aba4b44, type: 3}
+    - target: {fileID: 1128464571704813141, guid: f8986887b8eb2ac46872d1177ed2ee9a, type: 3}
+      propertyPath: attackSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 39fad711e67008e46a37bf610db0601c, type: 3}
     - target: {fileID: 1326805660701290587, guid: f8986887b8eb2ac46872d1177ed2ee9a, type: 3}
       propertyPath: m_Name
       value: Enemy1
@@ -20692,7 +20724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7422183253860786999, guid: f8986887b8eb2ac46872d1177ed2ee9a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.58
+      value: -7.83
       objectReference: {fileID: 0}
     - target: {fileID: 7422183253860786999, guid: f8986887b8eb2ac46872d1177ed2ee9a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20866,6 +20898,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3334048804699000883, guid: e26448245c9bc5145be024047be5491b, type: 3}
+      propertyPath: hitSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d1226429b9675648ae02136d8e672b9, type: 3}
+    - target: {fileID: 3334048804699000883, guid: e26448245c9bc5145be024047be5491b, type: 3}
+      propertyPath: deathSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 15071f7c3714c3b49986724041367903, type: 3}
+    - target: {fileID: 3334048804699000883, guid: e26448245c9bc5145be024047be5491b, type: 3}
+      propertyPath: attackSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e83623b929c135544a6f38cae0cbf41d, type: 3}
     - target: {fileID: 6838040716248571167, guid: e26448245c9bc5145be024047be5491b, type: 3}
       propertyPath: m_Name
       value: Enemy2
@@ -21022,6 +21066,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363040626194363687, guid: 17291e3fc27900a439952845b75b352f, type: 3}
+      propertyPath: hitSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: ae5af44fc9269b4469e06c9e87c1a1ab, type: 3}
+    - target: {fileID: 2363040626194363687, guid: 17291e3fc27900a439952845b75b352f, type: 3}
+      propertyPath: deathSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: c234037119349aa459f3964d11da73c5, type: 3}
+    - target: {fileID: 2363040626194363687, guid: 17291e3fc27900a439952845b75b352f, type: 3}
+      propertyPath: shootSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 0fb34b83628c3f843bda4e2f74ae812a, type: 3}
+    - target: {fileID: 2363040626194363687, guid: 17291e3fc27900a439952845b75b352f, type: 3}
+      propertyPath: attackSFX
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363040626194363687, guid: 17291e3fc27900a439952845b75b352f, type: 3}
       propertyPath: moveSpeed
       value: 5
       objectReference: {fileID: 0}
@@ -21039,7 +21099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5034266407086586619, guid: 17291e3fc27900a439952845b75b352f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.32
+      value: -6.84
       objectReference: {fileID: 0}
     - target: {fileID: 5034266407086586619, guid: 17291e3fc27900a439952845b75b352f, type: 3}
       propertyPath: m_LocalPosition.y

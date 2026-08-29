@@ -17,6 +17,16 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private GameObject panelLevelCompleted;
 
+    [Header("Audio")]
+    [SerializeField]
+    private AudioClip pauseSFX;
+    [SerializeField]
+    private AudioClip victorySFX;
+    [SerializeField]
+    private AudioClip spawnPointSFX;
+    [SerializeField]
+    private AudioClip buttonSFX;
+
     private void Awake()
     {
         Time.timeScale = 1f;
@@ -37,6 +47,7 @@ public class LevelManager : MonoBehaviour
 
     public void RestartButton()
     {
+        AudioManager.Instance.PlaySFX(buttonSFX);
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -48,6 +59,7 @@ public class LevelManager : MonoBehaviour
 
     public void MainMenuButton()
     {
+        AudioManager.Instance.PlaySFX(buttonSFX);
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
@@ -56,11 +68,13 @@ public class LevelManager : MonoBehaviour
     {
         if (panelPause.activeInHierarchy == false)
         {
+            AudioManager.Instance.PlaySFX(pauseSFX);
             panelPause.SetActive(true);
             Time.timeScale = 0f;
         }
         else
         {
+            AudioManager.Instance.PlaySFX(buttonSFX);
             panelPause.SetActive(false);
             Time.timeScale = 1f;
         }
@@ -68,6 +82,7 @@ public class LevelManager : MonoBehaviour
 
     public void FinishLevel()
     {
+        AudioManager.Instance.PlaySFX(victorySFX);
         panelLevelCompleted.SetActive(true);
         Time.timeScale = 0f;
     }

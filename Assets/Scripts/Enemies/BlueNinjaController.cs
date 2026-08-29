@@ -9,6 +9,10 @@ public class BlueNinjaController : EnemyController
     [SerializeField]
     private Transform firePoint;
 
+    [Header("Audio")]
+    [SerializeField]
+    private AudioClip shootSFX;
+
     void Start()
     {
         base.Start();
@@ -88,6 +92,7 @@ public class BlueNinjaController : EnemyController
 
     void Shoot()
     {
+        AudioManager.Instance.PlaySFX(shootSFX);
         GameObject bulletObj = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         BulletController bullet = bulletObj.GetComponent<BulletController>();
         bullet.damage = damage;

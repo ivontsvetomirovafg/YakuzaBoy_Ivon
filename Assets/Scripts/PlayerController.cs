@@ -80,6 +80,14 @@ public class PlayerController : MonoBehaviour
     [Header("Audio")]
     [SerializeField]
     private AudioClip deathSFX;
+    [SerializeField]
+    private AudioClip runSFX;
+    [SerializeField]
+    private AudioClip shootSFX;
+    [SerializeField]
+    private AudioClip jumpSFX;
+    [SerializeField]
+    private AudioClip hitSFX;
 
     private LevelManager levelManager; 
 
@@ -273,6 +281,7 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
+        AudioManager.Instance.PlaySFX(shootSFX);
         GameObject bulletObj = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         BulletController bullet = bulletObj.GetComponent<BulletController>();
         bullet.damage = damage;     
@@ -336,6 +345,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            AudioManager.Instance.PlaySFX(hitSFX);
             animator.SetTrigger("Hit");
         }
     }
@@ -365,6 +375,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
+        AudioManager.Instance.PlaySFX(jumpSFX);
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         animator.SetTrigger("JumpStart");
@@ -375,6 +386,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.AddForce(new Vector2(wallNormal.x * wallJumpForceX, wallJumpForceY), ForceMode2D.Impulse);
 
+        AudioManager.Instance.PlaySFX(jumpSFX);
         doubleJump = true;
         isWallStuck = false;
         wallJumpTimer = wallJumpDuration;

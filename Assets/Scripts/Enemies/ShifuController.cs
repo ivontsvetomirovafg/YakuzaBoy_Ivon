@@ -35,6 +35,14 @@ public class ShifuController : MonoBehaviour
     [Header("Animacion")]
     public Animator animator;
 
+    [Header("Audio")]
+    [SerializeField]
+    private AudioClip deathSFX;
+    [SerializeField]
+    private AudioClip attackSFX;
+    [SerializeField]
+    private AudioClip hitSFX;
+
     private Rigidbody2D rb;
     private Transform player;
     private PlayerController playerController;
@@ -156,6 +164,7 @@ public class ShifuController : MonoBehaviour
         dashDirection = (player.position - transform.position).normalized; //esto para guardar la pos del personaje
         animator.SetTrigger("Attack");
         rb.linearVelocity = dashDirection * dashSpeed;
+        AudioManager.Instance.PlaySFX(attackSFX);
 
         yield return new WaitForSeconds(3f);
 
@@ -194,7 +203,8 @@ public class ShifuController : MonoBehaviour
             Die();
         }
         else
-        {
+        {                      
+            AudioManager.Instance.PlaySFX(hitSFX);
             animator.SetTrigger("Hit");
         }
     }
@@ -216,6 +226,7 @@ public class ShifuController : MonoBehaviour
 
     void Die()
     {
+        AudioManager.Instance.PlaySFX(deathSFX);
         animator.SetTrigger("Death");
         rb.linearVelocity = Vector2.zero;
         this.enabled = false;

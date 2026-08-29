@@ -32,9 +32,14 @@ public class BulletController : MonoBehaviour
             if (collision.gameObject.CompareTag("Enemy"))
             {
                 EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+                ShifuController shifu = collision.gameObject.GetComponent<ShifuController>();
                 if (enemy != null)
                 {
                     enemy.TakeDamage(damage);
+                }
+                if (shifu != null)
+                {
+                    shifu.TakeDamage(damage);
                 }
                 Destroy(gameObject);
             }
