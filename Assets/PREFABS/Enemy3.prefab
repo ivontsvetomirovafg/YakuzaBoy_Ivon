@@ -593,7 +593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5417623534054858883
 Transform:
   m_ObjectHideFlags: 0
@@ -721,6 +721,9 @@ MonoBehaviour:
   playerController: {fileID: 0}
   playerDetected: 0
   otherNinja: 1
+  deathSFX: {fileID: 8300000, guid: 0b7ba277cf4f22047be8262032203c85, type: 3}
+  attackSFX: {fileID: 8300000, guid: 044cfef9867a8dc4c9d5749fc6926313, type: 3}
+  hitSFX: {fileID: 8300000, guid: b8b4ee1c904a993439e3b2dd2cde697f, type: 3}
   slowMultiplier: 0.4
   slowDuration: 5
 --- !u!50 &8191013344254954851

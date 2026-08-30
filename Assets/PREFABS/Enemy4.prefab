@@ -283,9 +283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc610eb9bfed150499e4ea0dfac1c294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  detectionRange: 5
-  stopDistance: 5
+  moveSpeed: 5
+  detectionRange: 6
+  stopDistance: 6
   maxLife: 3
   currentLife: 3
   hearts:
@@ -293,7 +293,7 @@ MonoBehaviour:
   - {fileID: 3600264925253946951}
   - {fileID: 8117841542481953720}
   damage: 1
-  attackCooldown: 2
+  attackCooldown: 3
   attackTime: 2
   attacking: 0
   alterao: 0
@@ -303,8 +303,12 @@ MonoBehaviour:
   playerController: {fileID: 0}
   playerDetected: 0
   otherNinja: 1
+  deathSFX: {fileID: 8300000, guid: c234037119349aa459f3964d11da73c5, type: 3}
+  attackSFX: {fileID: 0}
+  hitSFX: {fileID: 8300000, guid: ae5af44fc9269b4469e06c9e87c1a1ab, type: 3}
   bulletPrefab: {fileID: 4563671188182568362, guid: d688a27284dfd3d4391e8b18b7a786b9, type: 3}
   firePoint: {fileID: 3928029334664898592}
+  shootSFX: {fileID: 8300000, guid: 0fb34b83628c3f843bda4e2f74ae812a, type: 3}
 --- !u!1 &3600264925253946951
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +467,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 7.25
+  m_Radius: 8.4
 --- !u!1 &6134509009942845446
 GameObject:
   m_ObjectHideFlags: 0

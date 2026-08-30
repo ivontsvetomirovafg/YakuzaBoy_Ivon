@@ -342,7 +342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &912757527445406346
 Transform:
   m_ObjectHideFlags: 0
@@ -536,6 +536,9 @@ MonoBehaviour:
   - {fileID: 7818928490852177754}
   damage: 1
   animator: {fileID: 2886076897791600723}
+  deathSFX: {fileID: 8300000, guid: 15071f7c3714c3b49986724041367903, type: 3}
+  attackSFX: {fileID: 8300000, guid: e83623b929c135544a6f38cae0cbf41d, type: 3}
+  hitSFX: {fileID: 8300000, guid: 0d1226429b9675648ae02136d8e672b9, type: 3}
 --- !u!1 &7499947646709125380
 GameObject:
   m_ObjectHideFlags: 0

@@ -88,8 +88,11 @@ public class PlayerController : MonoBehaviour
     private AudioClip jumpSFX;
     [SerializeField]
     private AudioClip hitSFX;
+    [SerializeField]
+    private AudioClip spawnPointSFX;
 
     private LevelManager levelManager; 
+    private bool spawnGuardado;
 
     void Awake()
     {
@@ -461,11 +464,18 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Spawn")
         {
-            levelManager.spawnPoint = collision.transform;
+            if (spawnGuardado == false)
+            {
+                levelManager.spawnPoint = collision.transform;
+                AudioManager.Instance.PlaySFX(spawnPointSFX);
         
-            PlayerPrefs.SetFloat("SpawnX", collision.transform.position.x);
-            PlayerPrefs.SetFloat("SpawnY", collision.transform.position.y);
-            PlayerPrefs.Save();
+                PlayerPrefs.SetFloat("SpawnX", collision.transform.position.x);
+                PlayerPrefs.SetFloat("SpawnY", collision.transform.position.y);
+                PlayerPrefs.Save();
+
+                spawnGuardado = true; 
+            }
+            
         }
         else if (collision.gameObject.tag == "Door")
         {

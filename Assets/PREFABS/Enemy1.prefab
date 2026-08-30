@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7422183253860786999
 Transform:
   m_ObjectHideFlags: 0
@@ -125,6 +125,9 @@ MonoBehaviour:
   playerController: {fileID: 0}
   playerDetected: 0
   otherNinja: 0
+  deathSFX: {fileID: 8300000, guid: 2008c919a13640942adc2f206aba4b44, type: 3}
+  attackSFX: {fileID: 8300000, guid: 39fad711e67008e46a37bf610db0601c, type: 3}
+  hitSFX: {fileID: 8300000, guid: b99080dfa5ac75c4d80176a62d47030b, type: 3}
 --- !u!95 &6031188160444576681
 Animator:
   serializedVersion: 7

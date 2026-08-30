@@ -17,13 +17,14 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private GameObject panelLevelCompleted;
 
+    [SerializeField]
+    private Animator victoryAnim;
+
     [Header("Audio")]
     [SerializeField]
     private AudioClip pauseSFX;
     [SerializeField]
     private AudioClip victorySFX;
-    [SerializeField]
-    private AudioClip spawnPointSFX;
     [SerializeField]
     private AudioClip buttonSFX;
 
@@ -84,6 +85,6 @@ public class LevelManager : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX(victorySFX);
         panelLevelCompleted.SetActive(true);
-        Time.timeScale = 0f;
+        victoryAnim.SetTrigger("Victory");
     }
 }
