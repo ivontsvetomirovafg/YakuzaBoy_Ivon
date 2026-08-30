@@ -13071,6 +13071,7 @@ MonoBehaviour:
   musicSong: {fileID: 8300000, guid: 3707197fc6cba4d34b207041a5112352, type: 3}
   panelPause: {fileID: 160257497}
   panelLevelCompleted: {fileID: 1562888376}
+  victoryAnim: {fileID: 1562888378}
   pauseSFX: {fileID: 8300000, guid: 48a0c35fe8ad0fb4db00deac65040cd8, type: 3}
   victorySFX: {fileID: 8300000, guid: 648fe9edd7326714c86fdd28ec71a0d4, type: 3}
   buttonSFX: {fileID: 8300000, guid: a3eb0945c25e6c44298be725c5038cf6, type: 3}
@@ -19580,7 +19581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1562888377
 RectTransform:
   m_ObjectHideFlags: 0
