@@ -70,12 +70,14 @@ public class LevelManager : MonoBehaviour
         if (panelPause.activeInHierarchy == false)
         {
             AudioManager.Instance.PlaySFX(pauseSFX);
+            AudioManager.Instance.FadeOutMusic(2f);
             panelPause.SetActive(true);
             Time.timeScale = 0f;
         }
         else
         {
             AudioManager.Instance.PlaySFX(buttonSFX);
+            AudioManager.Instance.SetMusicVolume(0.4f);
             panelPause.SetActive(false);
             Time.timeScale = 1f;
         }
@@ -84,6 +86,7 @@ public class LevelManager : MonoBehaviour
     public void FinishLevel()
     {
         AudioManager.Instance.PlaySFX(victorySFX);
+        AudioManager.Instance.FadeOutMusic(2f);
         panelLevelCompleted.SetActive(true);
         victoryAnim.SetTrigger("Victory");
     }
