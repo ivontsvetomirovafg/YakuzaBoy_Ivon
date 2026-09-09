@@ -15,6 +15,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private GameObject panelPause;
     [SerializeField]
+    private GameObject panelSettings;
+    [SerializeField]
     private GameObject panelLevelCompleted;
 
     [SerializeField]
@@ -79,6 +81,31 @@ public class LevelManager : MonoBehaviour
             AudioManager.Instance.PlaySFX(buttonSFX);
             AudioManager.Instance.SetMusicVolume(0.4f);
             panelPause.SetActive(false);
+            Time.timeScale = 1f;
+        }
+    }
+    
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+    public void Settings()
+    {
+        if (panelSettings.activeInHierarchy == false)
+        {
+            AudioManager.Instance.PlaySFX(buttonSFX);
+            panelSettings.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
+    
+    public void BackButton()
+    {
+        if (panelSettings.activeInHierarchy == true)
+        {
+            AudioManager.Instance.PlaySFX(buttonSFX);
+            panelSettings.SetActive(false);
             Time.timeScale = 1f;
         }
     }

@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public bool isDead = false; 
     [SerializeField] 
     private int killCount;
+    [SerializeField] 
+    private int coinsCount;
 
     [Header("Salto")]
     [SerializeField] 
@@ -46,10 +48,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float radioDetectTecho;  
     [SerializeField]
-    private Vector2 desplazamientoDetectTecho;      
+    private Vector2 desplazamientoDetectTecho;   
 
-    private bool techoBloqueado;              
+    [SerializeField]
+    private float crouchColliderHeight;   // tamaño Y del collider agachado
+    [SerializeField]
+    private float crouchColliderOffsetY;  // offset Y del collider agachado
+
+    private bool techoBloqueado;
     private bool isCrouching;
+
+    private CapsuleCollider2D playerCollider;
+    private Vector2 colliderNormal;
+    private Vector2 colliderOffset;
     
     [Header("Ataque")]
     public float damage;
@@ -76,6 +87,8 @@ public class PlayerController : MonoBehaviour
     private Image lifeBar;
     [SerializeField]
     private Text killsText; 
+    [SerializeField]
+    private Text coinsText; 
 
     [Header("Audio")]
     [SerializeField]
@@ -89,6 +102,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioClip hitSFX;
     [SerializeField]
+    private AudioClip coinSFX;
+    [SerializeField]
     private AudioClip spawnPointSFX;
 
     private LevelManager levelManager; 
@@ -97,6 +112,10 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        playerCollider = GetComponent<CapsuleCollider2D>();
+        colliderNormal = playerCollider.size;
+        colliderOffset = playerCollider.offset;
     }    
     
     private void Start()
@@ -193,14 +212,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (doubleJump == false)
-        {
-            doubleJumpTimer += Time.deltaTime;
-            if (doubleJumpTimer >= doubleJumpCooldown)
-            {
-                doubleJump = true;
-            }
-        }
         Attack();
         CheckGrounded();
         CheckCrouch(); 
@@ -412,18 +423,26 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        bool wantsToCrouch = Input.GetKey(KeyCode.LeftControl);
+        bool agachar = Input.GetKey(KeyCode.LeftControl) || techoBloqueado;
 
-        if (wantsToCrouch == true || techoBloqueado == true)
+        // Solo tocamos el collider cuando CAMBIA el estado, no cada frame
+        if (agachar != isCrouching)
         {
-            isCrouching = true;
-        }
-        else
-        {
-            isCrouching = false;
-        }
+            isCrouching = agachar;
 
-        animator.SetBool("Agachar", isCrouching);
+            if (isCrouching == true)
+            {
+                playerCollider.size = new Vector2(colliderNormal.x, crouchColliderHeight);
+                playerCollider.offset = new Vector2(colliderOffset.x, crouchColliderOffsetY);
+            }
+            else
+            {
+                playerCollider.size = colliderNormal;
+                playerCollider.offset = colliderOffset;
+            }
+
+            animator.SetBool("Agachar", isCrouching);
+        }
 
         if (isCrouching == true && moveInput == 0)
         {
@@ -452,6 +471,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded == true)
         {
             animator.SetBool("Jump", false);
+            doubleJump = true;
         }
         else
         {
@@ -462,6 +482,14 @@ public class PlayerController : MonoBehaviour
     // EXPLICAR --> PlayerPrefs //
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Coin")
+        {
+            AudioManager.Instance.PlaySFX(coinSFX);
+            coinsCount++;
+            coinsText.text = "x" + coinsCount.ToString();
+            Destroy(collision.gameObject); 
+        }
+
         if (collision.gameObject.tag == "Spawn")
         {
             if (spawnGuardado == false)

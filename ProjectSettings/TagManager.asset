@@ -10,6 +10,7 @@ TagManager:
   - Spawn
   - Obst
   - Door
+  - Coin
   layers:
   - Default
   - TransparentFX

@@ -8,42 +8,61 @@ public class AudioManager : MonoBehaviour
     private AudioSource ambientSource;
     private AudioSource[] sfxSource;
 
+    private float musicVolume;
+    private float sfxVolume; 
+
     private void Awake()
     {
         if (Instance == null)
         {
-            DontDestroyOnLoad(gameObject);
             Instance = this;
+            DontDestroyOnLoad(gameObject);       
         }
         else
         {
             Destroy(gameObject);
+            return;
         }
+
         musicSource = GetComponent<AudioSource>();
         musicSource.loop = true;
-        ambientSource = gameObject.AddComponent<AudioSource>();
-        ambientSource.loop = true;
         sfxSource = new AudioSource[5];
-        for(int i = 0; i < sfxSource.Length; i++)
+
+        for (int i = 0; i < sfxSource.Length; i++)
         {
             sfxSource[i] = gameObject.AddComponent<AudioSource>();
         }
+
+        if (PlayerPrefs.HasKey("SettingsData"))
+        {
+            DataSettings saved = JsonUtility.FromJson<DataSettings>(PlayerPrefs.GetString("SettingsData"));
+            musicVolume = saved.musicVolume;
+            sfxVolume = saved.ambientVolume;
+        }
+        else
+        {
+            musicVolume = 1f;
+            sfxVolume = 1f;
+        }
+        musicSource.volume = musicVolume;
     }
-    public void PlayMusic(AudioClip _music, float _volume = 0.4f)
+
+    public void PlayMusic(AudioClip _music, float _volume = -1f)
     {
         if (musicSource.isPlaying && musicSource.clip == _music) 
         {
             return; 
+        }
+        if (_volume < 0f)
+        {
+            _volume = musicVolume;
         }
         musicSource.clip = _music;
         musicSource.volume = _volume;
         musicSource.loop = true;
         musicSource.Play();
     }
-    public void StopMusic()
-    {
-        musicSource.Stop();
-    }
+
     public void FadeOutMusic(float _speed)
     {
         StartCoroutine(FadeOutAudio(musicSource, _speed));
@@ -61,22 +80,17 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayAmbient(AudioClip _ambient, float _volume = 1)
-    {
-        ambientSource.clip = _ambient;
-        ambientSource.volume = _volume;
-        ambientSource.Play();
-    }
-    public void StopAmbient()
-    {
-        ambientSource.Stop();
-    }
     public void FadeOutAmbient(float _speed)
     {
         StartCoroutine(FadeOutAudio(ambientSource, _speed));
     }
-    public void PlaySFX(AudioClip _sfx, float _volume = 1)
+
+    public void PlaySFX(AudioClip _sfx, float _volume = -1f)
     {
+        if (_volume < 0f)
+        {
+            _volume = sfxVolume;
+        }
         for(int i = 0; i<sfxSource.Length; i++)
         {
             if (sfxSource[i].isPlaying==false)
@@ -88,8 +102,19 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
-    public void SetMusicVolume(float volume)
+
+    public void SetMusicVolume(float _volume)
     {
-        musicSource.volume = volume;
+        musicVolume = _volume;
+        musicSource.volume = _volume;
+    }
+
+    public void SetSFXVolume(float _volume)
+    {
+        sfxVolume = _volume;
+        for(int i = 0; i < sfxSource.Length; i++)
+        {
+            sfxSource[i].volume = _volume;
+        }
     }
 }

@@ -409,7 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3842929322862825691}
-  - component: {fileID: 373238925562211950}
+  - component: {fileID: 7848786586967491442}
   m_Layer: 0
   m_Name: Collison
   m_TagString: Untagged
@@ -432,8 +432,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5034266407086586619}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &373238925562211950
-CircleCollider2D:
+--- !u!70 &7848786586967491442
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -466,8 +466,9 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 8.4
+  m_Offset: {x: 0.07337395, y: 1.2569996}
+  m_Size: {x: 19.79518, y: 5.6748347}
+  m_Direction: 1
 --- !u!1 &6134509009942845446
 GameObject:
   m_ObjectHideFlags: 0

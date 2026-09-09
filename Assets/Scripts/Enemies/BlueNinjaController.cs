@@ -33,8 +33,6 @@ public class BlueNinjaController : EnemyController
             return;
         }
 
-        CheckPlayer();
-
         if (playerDetected == false)
         {
             attacking = false;

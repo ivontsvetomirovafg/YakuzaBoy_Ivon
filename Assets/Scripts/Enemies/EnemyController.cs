@@ -60,8 +60,6 @@ public class EnemyController : MonoBehaviour
             return;
         }
 
-        CheckPlayer();
-
         if (playerDetected == false)
         {
             attacking = false;
@@ -101,24 +99,20 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void CheckPlayer()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (alterao == true)
+        if (other.CompareTag("Player"))
         {
             playerDetected = true;
-            return;
+            player = other.transform;
         }
+    }
 
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRange);
-        //playerDetected = false;
-
-        for (int i = 0; i < colliders.Length; i++)
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && alterao == false)
         {
-            if (colliders[i].CompareTag("Player"))
-            {
-                playerDetected = true;
-                player = colliders[i].transform;
-            }
+            playerDetected = false;
         }
     }
 
@@ -150,7 +144,12 @@ public class EnemyController : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
+    {    
+        if (currentLife <= 0)
+        {
+            return; 
+        }
+
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
