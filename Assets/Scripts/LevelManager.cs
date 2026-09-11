@@ -55,6 +55,25 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void RestartWin()
+    {
+        AudioManager.Instance.PlaySFX(buttonSFX);
+        Time.timeScale = 1f;
+
+        PlayerPrefs.DeleteKey("SpawnX");
+        PlayerPrefs.DeleteKey("SpawnY");
+        PlayerPrefs.DeleteKey("CoinsCount");
+
+        PlayerPrefs.DeleteKey("CamMinX");
+        PlayerPrefs.DeleteKey("CamMaxX");
+        PlayerPrefs.DeleteKey("CamMinY");
+        PlayerPrefs.DeleteKey("CamMaxY");
+
+        PlayerPrefs.Save();
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }   
+
     public void NextLevelButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

@@ -2,13 +2,11 @@ using UnityEngine;
 
 public class Shuriken : MonoBehaviour
 {
-    [Header("Audio")]
-    [SerializeField]
-    private AudioClip shootSFX;
-
     public GameObject shurikenPrefab;
     public Transform firePoint;
     public float fireRate = 2f;
+    public bool shootsLeft; 
+
     private float fireTime;
 
     void Update()
@@ -23,12 +21,11 @@ public class Shuriken : MonoBehaviour
     void Shoot()
     {
         GameObject shurikenObj = Instantiate(shurikenPrefab, firePoint.position, Quaternion.identity);
-        AudioManager.Instance.PlaySFX(shootSFX);
         BulletController shuriken = shurikenObj.GetComponent<BulletController>();
-        shuriken.damage = 1f; 
+        shuriken.damage = 1f;
 
         Vector2 direction;
-        if (transform.eulerAngles.y == 0)
+        if (shootsLeft == true)
         {
             direction = Vector2.left;
         }

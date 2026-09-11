@@ -94,8 +94,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioClip deathSFX;
     [SerializeField]
-    private AudioClip runSFX;
-    [SerializeField]
     private AudioClip shootSFX;
     [SerializeField]
     private AudioClip jumpSFX;
@@ -107,7 +105,9 @@ public class PlayerController : MonoBehaviour
     private AudioClip spawnPointSFX;
 
     private LevelManager levelManager; 
-    private bool spawnGuardado;
+    [SerializeField]
+    private CamController camController;
+    private Transform spawnGuardado;
 
     void Awake()
     {
@@ -123,8 +123,11 @@ public class PlayerController : MonoBehaviour
         UpdateLife();
 
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-        killCount = PlayerPrefs.GetInt("KillCount", 0); //Guarda datos entre partidas.
+        killCount = PlayerPrefs.GetInt("KillCount", 0); //PlayersPrefs = Guarda datos entre partidas.
         UpdateKillCount();
+
+        coinsCount = PlayerPrefs.GetInt("CoinsCount", 0); // Para leer las monedas guardadas hasta el ultimo spawn.
+        coinsText.text = "x" + coinsCount.ToString();
 
         if (PlayerPrefs.HasKey("SpawnX")) //EXPLICAR
         {
@@ -132,6 +135,16 @@ public class PlayerController : MonoBehaviour
             float y = PlayerPrefs.GetFloat("SpawnY");
 
             transform.position = new Vector3(x, y, transform.position.z);
+        }
+            
+        if (PlayerPrefs.HasKey("CamMinX"))
+        {
+            float camMinX = PlayerPrefs.GetFloat("CamMinX");
+            float camMaxX = PlayerPrefs.GetFloat("CamMaxX");
+            float camMinY = PlayerPrefs.GetFloat("CamMinY");
+            float camMaxY = PlayerPrefs.GetFloat("CamMaxY");
+
+            camController.SetLimits(camMinX, camMaxX, camMinY, camMaxY);
         }
     }
 
@@ -144,8 +157,14 @@ public class PlayerController : MonoBehaviour
             PlayerPrefs.DeleteKey("SpawnX");
             PlayerPrefs.DeleteKey("SpawnY");
             PlayerPrefs.DeleteKey("KillCount");
-            PlayerPrefs.Save();
+            PlayerPrefs.DeleteKey("CoinsCount");
+            
+            PlayerPrefs.DeleteKey("CamMinX");
+            PlayerPrefs.DeleteKey("CamMaxX");
+            PlayerPrefs.DeleteKey("CamMinY");
+            PlayerPrefs.DeleteKey("CamMaxY");
 
+            PlayerPrefs.Save();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         
@@ -425,7 +444,7 @@ public class PlayerController : MonoBehaviour
 
         bool agachar = Input.GetKey(KeyCode.LeftControl) || techoBloqueado;
 
-        // Solo tocamos el collider cuando CAMBIA el estado, no cada frame
+        // Solo tocamos el collider cuando cambia el estado, no cada frame
         if (agachar != isCrouching)
         {
             isCrouching = agachar;
@@ -492,19 +511,26 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.tag == "Spawn")
         {
-            if (spawnGuardado == false)
+            if (collision.transform != spawnGuardado)
             {
+                spawnGuardado = collision.transform;
                 levelManager.spawnPoint = collision.transform;
                 AudioManager.Instance.PlaySFX(spawnPointSFX);
-        
+
                 PlayerPrefs.SetFloat("SpawnX", collision.transform.position.x);
                 PlayerPrefs.SetFloat("SpawnY", collision.transform.position.y);
-                PlayerPrefs.Save();
+                PlayerPrefs.SetInt("CoinsCount", coinsCount);
 
-                spawnGuardado = true; 
+                // guardar la pos de la cam
+                PlayerPrefs.SetFloat("CamMinX", camController.minX);
+                PlayerPrefs.SetFloat("CamMaxX", camController.maxX);
+                PlayerPrefs.SetFloat("CamMinY", camController.minY);
+                PlayerPrefs.SetFloat("CamMaxY", camController.maxY);
+
+                PlayerPrefs.Save();
             }
-            
         }
+
         else if (collision.gameObject.tag == "Door")
         {
             levelManager.FinishLevel();
