@@ -27,9 +27,6 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private bool doubleJump = true;    
-    [SerializeField]
-    private float doubleJumpCooldown = 1f;  
-    private float doubleJumpTimer;
 
     [Header("Pared")]
     [SerializeField]
@@ -51,7 +48,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 desplazamientoDetectTecho;   
 
     [SerializeField]
-    private float crouchColliderHeight;   // tamaño Y del collider agachado
+    private float crouchColliderHeight;   // tamaï¿½o Y del collider agachado
     [SerializeField]
     private float crouchColliderOffsetY;  // offset Y del collider agachado
 
@@ -217,17 +214,17 @@ public class PlayerController : MonoBehaviour
             if (isWallStuck == true)
             {
                 WallJump();
-            }
+            }    
 
-            if (isGrounded == true)
+            else if (isGrounded == true)
             {
                 Jump();
             }
+
             else if (doubleJump == true)
             {
                 Jump();
-                doubleJump = false;  
-                doubleJumpTimer = 0f;
+                doubleJump = false;
             }
         }
 
@@ -501,7 +498,7 @@ public class PlayerController : MonoBehaviour
     // EXPLICAR --> PlayerPrefs //
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Coin")
+        if (collision.gameObject.CompareTag("Coin"))
         {
             AudioManager.Instance.PlaySFX(coinSFX);
             coinsCount++;
@@ -509,7 +506,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject); 
         }
 
-        if (collision.gameObject.tag == "Spawn")
+        if (collision.gameObject.CompareTag("Spawn"))
         {
             if (collision.transform != spawnGuardado)
             {
@@ -531,7 +528,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        else if (collision.gameObject.tag == "Door")
+        else if (collision.gameObject.CompareTag("Door"))
         {
             levelManager.FinishLevel();
         }
