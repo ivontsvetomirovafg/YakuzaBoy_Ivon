@@ -6,7 +6,6 @@ public class EnemyController : MonoBehaviour
 {
     [Header("Movimiento")]
     public float moveSpeed;
-    public float detectionRange;
     public float stopDistance;
 
     [Header("Vida")]
@@ -57,6 +56,9 @@ public class EnemyController : MonoBehaviour
         
         if (playerController.isDead == true)
         {
+            attacking = false;
+            rb.linearVelocity = Vector2.zero;
+            animator.SetBool("Run", false);
             return;
         }
 
@@ -152,7 +154,6 @@ public class EnemyController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
             playerController.TakePlayerDamage(damage);
         }
     }
@@ -207,6 +208,8 @@ public class EnemyController : MonoBehaviour
             AudioManager.Instance.PlaySFX(deathSFX);
             animator.SetTrigger("Death");
             rb.linearVelocity = Vector2.zero;
+            rb.gravityScale = 0f;
+            GetComponent<Collider2D>().enabled = false;
             this.enabled = false;
 
             Destroy(gameObject, 1.5f);
@@ -217,6 +220,8 @@ public class EnemyController : MonoBehaviour
             AudioManager.Instance.PlaySFX(deathSFX);
             animator.SetTrigger("Hit");
             rb.linearVelocity = Vector2.zero;
+            rb.gravityScale = 0f;
+            GetComponent<Collider2D>().enabled = false;
             this.enabled = false;
 
             Destroy(gameObject, 0.5f);

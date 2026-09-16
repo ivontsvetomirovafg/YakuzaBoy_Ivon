@@ -2,12 +2,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Movimiento")]
     [SerializeField] 
     private float moveSpeed;
+    private float baseMoveSpeed; 
+    private Coroutine slowCoroutine;
+
     public bool canMove = true;
 
     [Header("Vida")]
@@ -18,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private int killCount;
     [SerializeField] 
     private int coinsCount;
+    private string monedasRecogidas = "";
 
     [Header("Salto")]
     [SerializeField] 
@@ -40,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private bool isWallStuck;
     private Vector2 wallNormal;
     private float wallJumpTimer;
+    private bool canWallJump = true;
     
     [Header("Agachar")]
     [SerializeField]
@@ -48,9 +54,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 desplazamientoDetectTecho;   
 
     [SerializeField]
-    private float crouchColliderHeight;   // tama�o Y del collider agachado
+    private float crouchColliderHeight; // tama�o Y del collider agachado.
     [SerializeField]
-    private float crouchColliderOffsetY;  // offset Y del collider agachado
+    private float crouchColliderOffsetY; // offset Y del collider agachado.
 
     private bool techoBloqueado;
     private bool isCrouching;
@@ -109,10 +115,10 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
         playerCollider = GetComponent<CapsuleCollider2D>();
         colliderNormal = playerCollider.size;
         colliderOffset = playerCollider.offset;
+        baseMoveSpeed = moveSpeed;
     }    
     
     private void Start()
@@ -120,7 +126,7 @@ public class PlayerController : MonoBehaviour
         UpdateLife();
 
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-        killCount = PlayerPrefs.GetInt("KillCount", 0); //PlayersPrefs = Guarda datos entre partidas.
+        killCount = PlayerPrefs.GetInt("KillCount", 0); //PlayersPrefs = Guarda datos entre partidas.        
         UpdateKillCount();
 
         coinsCount = PlayerPrefs.GetInt("CoinsCount", 0); // Para leer las monedas guardadas hasta el ultimo spawn.
@@ -155,6 +161,7 @@ public class PlayerController : MonoBehaviour
             PlayerPrefs.DeleteKey("SpawnY");
             PlayerPrefs.DeleteKey("KillCount");
             PlayerPrefs.DeleteKey("CoinsCount");
+            PlayerPrefs.DeleteKey("CollectedCoins");
             
             PlayerPrefs.DeleteKey("CamMinX");
             PlayerPrefs.DeleteKey("CamMaxX");
@@ -211,7 +218,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") == true)
         {
-            if (isWallStuck == true)
+            if (isWallStuck == true && canWallJump == true)
             {
                 WallJump();
             }    
@@ -247,7 +254,10 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        if (wallJumpTimer <= 0f)
+        {
+            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        }   
 
         if (isWallStuck == true)
         {
@@ -284,6 +294,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             isTouchingWall = false;
+            canWallJump = true;
         }
     }
 
@@ -299,6 +310,11 @@ public class PlayerController : MonoBehaviour
         if (isGrounded == false)
         {
             return; 
+        }
+        
+        if (isCrouching == true)
+        {
+            return;
         }
         
         if (Input.GetMouseButtonDown(1) && Time.time >= fireTime + fireRate) 
@@ -328,7 +344,7 @@ public class PlayerController : MonoBehaviour
         bullet.SetDirection(direction);
     }
 
-    public void SlowHit(float slowMultiplier, float slowDuration)
+    public void SlowHit(float slowMultiplier, float slowDuration) //EXPLICAR
     {
         if (isDead == true)
         {
@@ -339,7 +355,11 @@ public class PlayerController : MonoBehaviour
 
         if (slowHits < 3)
         {
-            StartCoroutine(SlowEffect(slowMultiplier, slowDuration));
+            if (slowCoroutine != null)
+            {
+                StopCoroutine(slowCoroutine);
+            }
+            slowCoroutine = StartCoroutine(SlowEffect(slowMultiplier, slowDuration));
             animator.SetTrigger("Hit");
         }
         else
@@ -351,12 +371,10 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator SlowEffect(float slowMultiplier, float slowDuration)
     {
-        float originalSpeed = moveSpeed;
-        moveSpeed = moveSpeed * slowMultiplier;
-
+        moveSpeed = baseMoveSpeed * slowMultiplier;
         yield return new WaitForSeconds(slowDuration);
-
-        moveSpeed = originalSpeed;
+        moveSpeed = baseMoveSpeed; 
+        slowCoroutine = null;
     }
 
     public void TakePlayerDamage(float _damage)
@@ -417,8 +435,9 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(new Vector2(wallNormal.x * wallJumpForceX, wallJumpForceY), ForceMode2D.Impulse);
 
         AudioManager.Instance.PlaySFX(jumpSFX);
-        doubleJump = true;
+        doubleJump = false;
         isWallStuck = false;
+        canWallJump = false;
         wallJumpTimer = wallJumpDuration;
         animator.SetTrigger("JumpStart");
     }
@@ -441,7 +460,7 @@ public class PlayerController : MonoBehaviour
 
         bool agachar = Input.GetKey(KeyCode.LeftControl) || techoBloqueado;
 
-        // Solo tocamos el collider cuando cambia el estado, no cada frame
+        // Solo toca el collider cuando cambia el estado, no cada frame.
         if (agachar != isCrouching)
         {
             isCrouching = agachar;
@@ -488,6 +507,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("Jump", false);
             doubleJump = true;
+            canWallJump = true;
         }
         else
         {
@@ -503,6 +523,9 @@ public class PlayerController : MonoBehaviour
             AudioManager.Instance.PlaySFX(coinSFX);
             coinsCount++;
             coinsText.text = "x" + coinsCount.ToString();
+
+            monedasRecogidas += collision.gameObject.name + ",";         
+            
             Destroy(collision.gameObject); 
         }
 
@@ -518,11 +541,17 @@ public class PlayerController : MonoBehaviour
                 PlayerPrefs.SetFloat("SpawnY", collision.transform.position.y);
                 PlayerPrefs.SetInt("CoinsCount", coinsCount);
 
-                // guardar la pos de la cam
+                // guardar la pos de la cam.
                 PlayerPrefs.SetFloat("CamMinX", camController.minX);
                 PlayerPrefs.SetFloat("CamMaxX", camController.maxX);
                 PlayerPrefs.SetFloat("CamMinY", camController.minY);
                 PlayerPrefs.SetFloat("CamMaxY", camController.maxY);
+
+                //monedas 
+                string monedasGuardadas = PlayerPrefs.GetString("CollectedCoins", "");
+                monedasGuardadas += monedasRecogidas;
+                PlayerPrefs.SetString("CollectedCoins", monedasGuardadas);
+                monedasRecogidas = ""; // Ya quedaron guardadas.
 
                 PlayerPrefs.Save();
             }

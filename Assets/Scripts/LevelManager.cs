@@ -63,6 +63,7 @@ public class LevelManager : MonoBehaviour
         PlayerPrefs.DeleteKey("SpawnX");
         PlayerPrefs.DeleteKey("SpawnY");
         PlayerPrefs.DeleteKey("CoinsCount");
+        PlayerPrefs.DeleteKey("CollectedCoins");
 
         PlayerPrefs.DeleteKey("CamMinX");
         PlayerPrefs.DeleteKey("CamMaxX");
@@ -131,8 +132,8 @@ public class LevelManager : MonoBehaviour
 
     public void FinishLevel()
     {
-        AudioManager.Instance.PlaySFX(victorySFX);
         AudioManager.Instance.FadeOutMusic(2f);
+        AudioManager.Instance.PlaySFX(victorySFX);  
         panelLevelCompleted.SetActive(true);
         victoryAnim.SetTrigger("Victory");
     }

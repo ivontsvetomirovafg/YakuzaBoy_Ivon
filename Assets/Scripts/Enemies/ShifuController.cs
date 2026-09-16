@@ -228,6 +228,8 @@ public class ShifuController : MonoBehaviour
         AudioManager.Instance.PlaySFX(deathSFX);
         animator.SetTrigger("Death");
         rb.linearVelocity = Vector2.zero;
+        rb.gravityScale = 0f;
+        GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
 
         Destroy(gameObject, 1f);

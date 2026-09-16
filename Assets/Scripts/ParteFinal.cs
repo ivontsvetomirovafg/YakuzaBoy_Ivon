@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ParteFinal : MonoBehaviour
 {
-    public EnemyController enemigoFinal; 
-    public GameObject[] pinchos;       
+    public EnemyController enemyToWatch;
+    public GameObject spike;
 
     private bool triggered;
 
@@ -14,7 +14,7 @@ public class ParteFinal : MonoBehaviour
             return;
         }
 
-        if (enemigoFinal == null || enemigoFinal.currentLife <= 0)
+        if (enemyToWatch == null || enemyToWatch.currentLife <= 0)
         {
             triggered = true;
             Disappear();
@@ -23,17 +23,18 @@ public class ParteFinal : MonoBehaviour
 
     void Disappear()
     {
-        for (int i = 0; i < pinchos.Length; i++)
+        Collider2D[] spikeColliders = spike.GetComponentsInChildren<Collider2D>();
+        for (int i = 0; i < spikeColliders.Length; i++)
         {
-            pinchos[i].GetComponent<Collider2D>().enabled = false;
-
-            Animator pinchosAnim = pinchos[i].GetComponent<Animator>();
-            if (pinchosAnim != null)
-            {
-                pinchosAnim.SetTrigger("NoPinchos");
-            }
-
-            Destroy(pinchos[i], 2f);
+            spikeColliders[i].enabled = false;
         }
+
+        Animator spikeAnimator = spike.GetComponent<Animator>();
+        if (spikeAnimator != null)
+        {
+            spikeAnimator.SetTrigger("Disappear");
+        }
+
+        Destroy(spike, 2f);
     }
 }
