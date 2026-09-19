@@ -99,7 +99,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             AudioManager.Instance.PlaySFX(buttonSFX);
-            AudioManager.Instance.SetMusicVolume(0.4f);
+            AudioManager.Instance.MiMusicVolume();
             panelPause.SetActive(false);
             Time.timeScale = 1f;
         }
@@ -116,6 +116,7 @@ public class LevelManager : MonoBehaviour
         {
             AudioManager.Instance.PlaySFX(buttonSFX);
             panelSettings.SetActive(true);
+            panelPause.SetActive(false);
             Time.timeScale = 0f;
         }
     }
@@ -126,7 +127,7 @@ public class LevelManager : MonoBehaviour
         {
             AudioManager.Instance.PlaySFX(buttonSFX);
             panelSettings.SetActive(false);
-            Time.timeScale = 1f;
+            panelPause.SetActive(true);
         }
     }
 

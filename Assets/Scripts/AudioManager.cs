@@ -5,7 +5,6 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
     private AudioSource musicSource;
-    private AudioSource ambientSource;
     private AudioSource[] sfxSource;
 
     private float musicVolume;
@@ -80,11 +79,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void FadeOutAmbient(float _speed)
-    {
-        StartCoroutine(FadeOutAudio(ambientSource, _speed));
-    }
-
     public void PlaySFX(AudioClip _sfx, float _volume = -1f)
     {
         if (_volume < 0f)
@@ -103,18 +97,23 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void SetMusicVolume(float _volume)
-    {
-        musicVolume = _volume;
-        musicSource.volume = _volume;
-    }
-
     public void SetSFXVolume(float _volume)
     {
         sfxVolume = _volume;
-        for(int i = 0; i < sfxSource.Length; i++)
+        for (int i = 0; i < sfxSource.Length; i++)
         {
             sfxSource[i].volume = _volume;
         }
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicVolume = volume;
+        musicSource.volume = volume;
+    }
+
+    public void MiMusicVolume()
+    {
+        musicSource.volume = musicVolume;
     }
 }
