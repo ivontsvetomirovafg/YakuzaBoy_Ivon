@@ -7,10 +7,6 @@ public class LevelManager : MonoBehaviour
     [Header("Spawn")]
     public Transform spawnPoint;
 
-    [Header("Audio")]
-    [SerializeField]
-    private AudioClip musicSong;
-
     [Header("UI")]
     [SerializeField]
     private GameObject panelPause;
@@ -18,17 +14,33 @@ public class LevelManager : MonoBehaviour
     private GameObject panelSettings;
     [SerializeField]
     private GameObject panelLevelCompleted;
-
     [SerializeField]
     private Animator victoryAnim;
 
-    [Header("Audio")]
+    [Header("Audio")]    
+    [SerializeField]
+    private AudioClip musicSong;
     [SerializeField]
     private AudioClip pauseSFX;
     [SerializeField]
     private AudioClip victorySFX;
     [SerializeField]
     private AudioClip buttonSFX;
+
+    [Header("Tiempo y puntuacion")]
+    [SerializeField]
+    private Text timerText;      
+    [SerializeField]
+    private Text winTimeText;     
+    [SerializeField]
+    private Text winDeathsText;  
+    [SerializeField]
+    private Text winPuntuacionText;   
+    [SerializeField]
+    private Text winNotaText;   
+
+    private float tiempoTrans;    
+    private bool levelFinished;
 
     private void Awake()
     {
@@ -37,6 +49,7 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
+        tiempoTrans = PlayerPrefs.GetFloat("TiempoTranscurrido", 0f);
         AudioManager.Instance.PlayMusic(musicSong); 
     }
 
@@ -46,13 +59,94 @@ public class LevelManager : MonoBehaviour
         {
             Pause();
         }
+
+        if (levelFinished == false)
+        {
+            tiempoTrans += Time.deltaTime;
+            UpdateTimerUI();
+        }
     }
 
-    public void RestartButton()
+    // TIEMPO Y PUNTUACIÓN // 
+
+    public void GuardarTiempoTrans()
     {
-        AudioManager.Instance.PlaySFX(buttonSFX);
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.SetFloat("TiempoTranscurrido", tiempoTrans);
+        PlayerPrefs.Save();
+    }
+
+    void UpdateTimerUI()
+    {
+        int minutos = Mathf.FloorToInt(tiempoTrans / 60f);
+        int segundos = Mathf.FloorToInt(tiempoTrans % 60f);
+        timerText.text = minutos.ToString("00") + ":" + segundos.ToString("00");
+    }
+
+    public void FinishLevel()
+    {
+        levelFinished = true;
+
+        AudioManager.Instance.FadeOutMusic(2f);
+        AudioManager.Instance.PlaySFX(victorySFX);
+        panelLevelCompleted.SetActive(true);
+        victoryAnim.SetTrigger("Victory");
+
+        int killCount = PlayerPrefs.GetInt("KillCount", 0);
+        float tiempoPerfecto = 360f; 
+        float segundosDeMas = Mathf.Max(0f, tiempoTrans - tiempoPerfecto);
+        int muertesQueCuentan = Mathf.Max(0, killCount - 10);
+        int puntuacion = Mathf.RoundToInt(10000f - (segundosDeMas * 5f) - (muertesQueCuentan * 250f));
+        puntuacion = Mathf.Max(puntuacion, 0); 
+
+        string nota = GetGrade(puntuacion);
+
+        winTimeText.text = timerText.text; 
+        winDeathsText.text = "Muertes: " + killCount.ToString();
+        winPuntuacionText.text = "Puntuacion: " + puntuacion.ToString();
+        winNotaText.text = nota;
+    }
+
+    string GetGrade(int score)
+    {
+        if (score >= 9300) 
+        { 
+            return "A"; 
+        }
+
+        else if (score >= 8600) 
+        { 
+            return "-A"; 
+        }
+
+        else if (score >= 7900) 
+        { 
+            return "+B"; 
+        }
+
+        else if (score >= 7200) 
+        { 
+            return "B"; 
+        }
+
+        else if (score >= 6500) 
+        { 
+            return "-B"; 
+        }
+
+        else if (score >= 5800) 
+        { 
+            return "+C"; 
+        }
+
+        else if (score >= 5100) 
+        { 
+            return "C"; 
+        }
+
+        else 
+        { 
+            return "-C"; 
+        }
     }
 
     public void RestartWin()
@@ -64,6 +158,8 @@ public class LevelManager : MonoBehaviour
         PlayerPrefs.DeleteKey("SpawnY");
         PlayerPrefs.DeleteKey("CoinsCount");
         PlayerPrefs.DeleteKey("CollectedCoins");
+        PlayerPrefs.DeleteKey("TiempoTranscurrido");
+        PlayerPrefs.DeleteKey("KillCount");
 
         PlayerPrefs.DeleteKey("CamMinX");
         PlayerPrefs.DeleteKey("CamMaxX");
@@ -75,10 +171,7 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }   
 
-    public void NextLevelButton()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    // BOTONES SETTINGS
 
     public void MainMenuButton()
     {
@@ -104,11 +197,6 @@ public class LevelManager : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-    
-    public void Exit()
-    {
-        Application.Quit();
-    }
 
     public void Settings()
     {
@@ -129,13 +217,5 @@ public class LevelManager : MonoBehaviour
             panelSettings.SetActive(false);
             panelPause.SetActive(true);
         }
-    }
-
-    public void FinishLevel()
-    {
-        AudioManager.Instance.FadeOutMusic(2f);
-        AudioManager.Instance.PlaySFX(victorySFX);  
-        panelLevelCompleted.SetActive(true);
-        victoryAnim.SetTrigger("Victory");
     }
 }

@@ -162,7 +162,8 @@ public class PlayerController : MonoBehaviour
             PlayerPrefs.DeleteKey("KillCount");
             PlayerPrefs.DeleteKey("CoinsCount");
             PlayerPrefs.DeleteKey("CollectedCoins");
-            
+            PlayerPrefs.DeleteKey("TiempoTranscurrido");
+
             PlayerPrefs.DeleteKey("CamMinX");
             PlayerPrefs.DeleteKey("CamMaxX");
             PlayerPrefs.DeleteKey("CamMinY");
@@ -409,12 +410,13 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(Respawn());
     }
 
-    private IEnumerator Respawn() // EXPLICAR
+    private IEnumerator Respawn() 
     {
         yield return new WaitForSeconds(2f);
 
         killCount++;
         PlayerPrefs.SetInt("KillCount", killCount);
+        levelManager.GuardarTiempoTrans();
         PlayerPrefs.Save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
