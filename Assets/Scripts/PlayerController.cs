@@ -403,6 +403,7 @@ public class PlayerController : MonoBehaviour
     {
         isDead = true;
         rb.linearVelocity = Vector2.zero;
+        animator.speed = 1f; // para la anim de agachar
         AudioManager.Instance.PlaySFX(deathSFX);
         animator.SetTrigger("Death");
         enabled = false; 
@@ -517,7 +518,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // EXPLICAR --> PlayerPrefs //
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Coin"))

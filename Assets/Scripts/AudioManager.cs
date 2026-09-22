@@ -65,8 +65,8 @@ public class AudioManager : MonoBehaviour
     public void FadeOutMusic(float _speed)
     {
         StartCoroutine(FadeOutAudio(musicSource, _speed));
-
     }
+
     IEnumerator FadeOutAudio (AudioSource source, float _speed)
     {
         float targetVolume = 0.15f;

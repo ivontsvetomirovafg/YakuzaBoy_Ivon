@@ -4,6 +4,7 @@ public class ParteFinal : MonoBehaviour
 {
     public EnemyController enemyToWatch;
     public GameObject spike;
+    public Shuriken shurikenDesactivar;
 
     private bool triggered;
 
@@ -33,6 +34,11 @@ public class ParteFinal : MonoBehaviour
         if (spikeAnimator != null)
         {
             spikeAnimator.SetTrigger("Disappear");
+        }
+        
+        if (shurikenDesactivar != null)
+        {
+            shurikenDesactivar.enabled = false; 
         }
 
         Destroy(spike, 2f);

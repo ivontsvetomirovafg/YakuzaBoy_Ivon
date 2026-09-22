@@ -92,12 +92,15 @@ public class LevelManager : MonoBehaviour
         victoryAnim.SetTrigger("Victory");
 
         int killCount = PlayerPrefs.GetInt("KillCount", 0);
+        int coinsCollected = PlayerPrefs.GetInt("CoinsCount", 0);
+
         float tiempoPerfecto = 360f; 
         float segundosDeMas = Mathf.Max(0f, tiempoTrans - tiempoPerfecto);
         int muertesQueCuentan = Mathf.Max(0, killCount - 10);
+        int bonusMonedas = coinsCollected * 20;
+
         int puntuacion = Mathf.RoundToInt(10000f - (segundosDeMas * 5f) - (muertesQueCuentan * 250f));
         puntuacion = Mathf.Max(puntuacion, 0); 
-
         string nota = GetGrade(puntuacion);
 
         winTimeText.text = timerText.text; 

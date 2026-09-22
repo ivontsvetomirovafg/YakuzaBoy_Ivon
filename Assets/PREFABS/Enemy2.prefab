@@ -476,7 +476,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -527,7 +527,7 @@ MonoBehaviour:
   chaseSpeed: 5
   dashSpeed: 10
   dashDuration: 3
-  dashCooldown: 2
+  dashCooldown: 1.5
   maxLife: 3
   currentLife: 3
   hearts:

@@ -4,8 +4,12 @@ using UnityEngine.UI;
 
 public class FadeOf : MonoBehaviour
 {
+    [Header("Fade")]
     [SerializeField]
     private Image image;
+    [SerializeField]
+    private float fadeSpeed = 0.5f;
+
     [SerializeField]
     private AudioClip fightSound;
     [SerializeField]
@@ -34,6 +38,7 @@ public class FadeOf : MonoBehaviour
         StartCoroutine(FadeOut());
         StartCoroutine(StartSequence());
     }
+
     private IEnumerator FadeOut()
     {
         float alpha = 1.0f;
@@ -41,7 +46,7 @@ public class FadeOf : MonoBehaviour
 
         while (alpha > 0)
         {
-            alpha -= 0.05f;
+            alpha -= fadeSpeed * Time.deltaTime;
             colorImagen.a = alpha;
             image.color = colorImagen;
             yield return null;
