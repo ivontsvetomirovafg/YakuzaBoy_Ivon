@@ -35851,25 +35851,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1385931296}
     m_Modifications:
-    - target: {fileID: 497627159060445353, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -38.915962
-      objectReference: {fileID: 0}
-    - target: {fileID: 1358451658666577557, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -39.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461361299637058563, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -39.41296
-      objectReference: {fileID: 0}
     - target: {fileID: 5376929271147392562, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
       propertyPath: moveSpeed
-      value: 4.2
+      value: 4.3
       objectReference: {fileID: 0}
     - target: {fileID: 5376929271147392562, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
       propertyPath: stopDistance
-      value: 4.4
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 5417623534054858883, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35910,14 +35898,6 @@ PrefabInstance:
     - target: {fileID: 5417623534054858883, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8100740578572718669, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -38.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 8191013344254954851, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8356137717478547003, guid: c80334d333ee8ed41896475c33db58f1, type: 3}
       propertyPath: m_Name

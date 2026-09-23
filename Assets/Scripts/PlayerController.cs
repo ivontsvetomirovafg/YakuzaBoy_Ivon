@@ -123,8 +123,6 @@ public class PlayerController : MonoBehaviour
     
     private void Start()
     {
-        UpdateLife();
-
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         killCount = PlayerPrefs.GetInt("KillCount", 0); //PlayersPrefs = Guarda datos entre partidas.        
         UpdateKillCount();
@@ -276,7 +274,6 @@ public class PlayerController : MonoBehaviour
             }
 
             currentLife = 0;
-            UpdateLife();
             Die();
         }
     }
@@ -386,7 +383,6 @@ public class PlayerController : MonoBehaviour
         }
 
         currentLife -= _damage;
-        UpdateLife();
 
         if (currentLife <= 0)
         {
@@ -563,11 +559,6 @@ public class PlayerController : MonoBehaviour
         {
             levelManager.FinishLevel();
         }
-    }
-
-    public void UpdateLife()
-    {
-        lifeBar.fillAmount = currentLife / maxLife;
     }
 
     public void UpdateKillCount()
