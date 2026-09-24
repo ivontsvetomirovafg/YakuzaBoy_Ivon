@@ -16,7 +16,7 @@ public class FadeOf : MonoBehaviour
     private GameObject fightText;
 
     private PlayerController playerController;
-    private static bool introPlayed; //para que no se repita todo el rato 
+    public static bool introPlayed; //para que no se repita todo el rato 
 
     void Start()
     {

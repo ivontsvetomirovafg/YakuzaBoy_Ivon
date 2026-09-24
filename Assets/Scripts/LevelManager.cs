@@ -15,6 +15,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private GameObject panelLevelCompleted;
     [SerializeField]
+    private GameObject retryPannel;
+    [SerializeField]
     private Animator victoryAnim;
 
     [Header("Audio")]    
@@ -38,6 +40,8 @@ public class LevelManager : MonoBehaviour
     private Text winPuntuacionText;   
     [SerializeField]
     private Text winNotaText;   
+    [SerializeField]
+    private Text winCoinsText;
 
     private float tiempoTrans; //cuantos seg lleva la partida.    
     private bool levelFinished;
@@ -67,7 +71,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    // TIEMPO Y PUNTUACIÓN // 
+    // TIEMPO Y PUNTUACIï¿½N // 
 
     public void GuardarTiempoTrans()
     {
@@ -100,13 +104,14 @@ public class LevelManager : MonoBehaviour
         int bonusMonedas = coinsCollected * 50; // cada moneda suma 50 puntos. 
 
         int puntuacion = Mathf.RoundToInt(10000f + bonusMonedas - (segundosDeMas * 5f) - (muertesQueCuentan * 250f)); 
-        puntuacion = Mathf.Max(puntuacion, 0); // para que la puntuación no baje de 0 (no num negativo). 
+        puntuacion = Mathf.Max(puntuacion, 0); // para que la puntuaciï¿½n no baje de 0 (no num negativo). 
         string nota = GetGrade(puntuacion);
 
         winTimeText.text = timerText.text; 
         winDeathsText.text = "Muertes: " + killCount.ToString();
         winPuntuacionText.text = "Puntuacion: " + puntuacion.ToString();
         winNotaText.text = nota;
+        winCoinsText.text = coinsCollected + "/20"; 
     }
 
     private string GetGrade(int score)
@@ -170,6 +175,7 @@ public class LevelManager : MonoBehaviour
         PlayerPrefs.DeleteKey("CamMaxY");
 
         PlayerPrefs.Save();
+        FadeOf.introPlayed = false;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }   
@@ -180,6 +186,7 @@ public class LevelManager : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX(buttonSFX);
         Time.timeScale = 1f;
+        FadeOf.introPlayed = false;
         SceneManager.LoadScene(0);
     }
 
@@ -210,6 +217,24 @@ public class LevelManager : MonoBehaviour
             panelPause.SetActive(false);
             Time.timeScale = 0f;
         }
+    }
+
+    public void RetryButton()
+    {
+        if (retryPannel.activeInHierarchy == false)
+        {
+            AudioManager.Instance.PlaySFX(pauseSFX);
+            AudioManager.Instance.FadeOutMusic(2f);
+            retryPannel.SetActive(true);
+            panelPause.SetActive(false);
+        }
+    }
+    public void ContinueButton()
+    {
+        AudioManager.Instance.PlaySFX(buttonSFX);
+        AudioManager.Instance.MiMusicVolume();
+        retryPannel.SetActive(false);
+        Time.timeScale = 1f;
     }
     
     public void BackButton()
