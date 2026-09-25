@@ -19831,7 +19831,6 @@ MonoBehaviour:
   firePoint: {fileID: 1358087401}
   fireRate: 1
   animator: {fileID: 93313984}
-  lifeBar: {fileID: 0}
   killsText: {fileID: 1413384458}
   coinsText: {fileID: 753584179}
   deathSFX: {fileID: 8300000, guid: 95996e98b36aa4399b5699682ae78cf7, type: 3}
@@ -21305,10 +21304,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19eb10490b2afd949b11a7e8ceb6cef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinX: -8
+  MinX: -7
   MaxX: 83
   MinY: 10
-  MaxY: 12
+  MaxY: 10
 --- !u!61 &1060527748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21638,7 +21637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19eb10490b2afd949b11a7e8ceb6cef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinX: -8
+  MinX: -7
   MaxX: 45
   MinY: 20
   MaxY: 25
@@ -21697,8 +21696,8 @@ Transform:
   m_GameObject: {fileID: 1089471556}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -97.42885, y: 11.82072, z: 0}
-  m_LocalScale: {x: 1.99, y: 1, z: 1}
+  m_LocalPosition: {x: -100.61, y: 11.82072, z: 0}
+  m_LocalScale: {x: 1.1566875, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 815287284}
@@ -22280,10 +22279,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19eb10490b2afd949b11a7e8ceb6cef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinX: -8
+  MinX: -7
   MaxX: 83
   MinY: 10
-  MaxY: 11.5
+  MaxY: 10
 --- !u!61 &1217245511
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22339,8 +22338,8 @@ Transform:
   m_GameObject: {fileID: 1217245509}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -97.42885, y: 7.7707195, z: 0}
-  m_LocalScale: {x: 1.99, y: 1, z: 1}
+  m_LocalPosition: {x: -100.64, y: 7.7707195, z: 0}
+  m_LocalScale: {x: 1.0746001, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 815287284}

@@ -59,6 +59,7 @@ public class GameSettings : MonoBehaviour
     {
         string data = JsonUtility.ToJson(dataSettings);
         PlayerPrefs.SetString("SettingsData", data);
+        PlayerPrefs.Save();
     }
  
     private void SetUIElements()

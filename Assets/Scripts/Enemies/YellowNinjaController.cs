@@ -15,18 +15,16 @@ public class YellowNinjaController : EnemyController
 
     void Update()
     {
-        if (playerController.isDead == true)
-        {
-            attacking = false;
-            rb.linearVelocity = Vector2.zero;
-            animator.SetBool("Run", false);
-            return;
-        }
         base.Update();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (currentLife <= 0)
+        {
+            return;
+        }
+
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerController collidedPlayer = collision.gameObject.GetComponent<PlayerController>();

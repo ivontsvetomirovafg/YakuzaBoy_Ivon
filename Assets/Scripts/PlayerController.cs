@@ -87,8 +87,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("UI")]
     [SerializeField]
-    private Image lifeBar;
-    [SerializeField]
     private Text killsText; 
     [SerializeField]
     private Text coinsText; 
@@ -315,7 +313,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         
-        if (Input.GetMouseButtonDown(1) && Time.time >= fireTime + fireRate) 
+        if (Input.GetMouseButtonDown(0) && Time.time >= fireTime + fireRate) 
         {
             Shoot();
             animator.SetTrigger("Attack");

@@ -18,7 +18,7 @@ public class CamController : MonoBehaviour
         float x = Mathf.Clamp(player.position.x, minX, maxX);
         float y = Mathf.Clamp(player.position.y, minY, maxY);
 
-        transform.position = new Vector3(x, y + camOffset.y, camOffset.z);
+        transform.position = new Vector3(x + camOffset.x, y + camOffset.y, camOffset.z);
     }
 
     public void SetLimits(float newMinX, float newMaxX, float newMinY, float newMaxY)
