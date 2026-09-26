@@ -241,8 +241,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.0588236, y: 3.4117646}
+  m_Offset: {x: 0, y: 0.02377224}
+  m_Size: {x: 2.0588236, y: 3.3642201}
   m_Direction: 0
 --- !u!50 &731517669094123942
 Rigidbody2D:
@@ -259,7 +259,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 50
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -284,7 +284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  detectionRange: 6
   stopDistance: 6
   maxLife: 3
   currentLife: 3

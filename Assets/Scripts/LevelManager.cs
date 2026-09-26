@@ -45,6 +45,7 @@ public class LevelManager : MonoBehaviour
 
     private float tiempoTrans; //cuantos seg lleva la partida.    
     private bool levelFinished;
+    private PlayerController playerController;
 
     private void Awake()
     {
@@ -53,6 +54,8 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        playerController = playerObj.GetComponent<PlayerController>();
         tiempoTrans = PlayerPrefs.GetFloat("TiempoTranscurrido", 0f);
         AudioManager.Instance.PlayMusic(musicSong); 
     }
@@ -198,6 +201,7 @@ public class LevelManager : MonoBehaviour
             AudioManager.Instance.FadeOutMusic(2f);
             panelPause.SetActive(true);
             Time.timeScale = 0f;
+            playerController.SetCanMove(false);
         }
         else
         {
@@ -205,6 +209,7 @@ public class LevelManager : MonoBehaviour
             AudioManager.Instance.MiMusicVolume();
             panelPause.SetActive(false);
             Time.timeScale = 1f;
+            playerController.SetCanMove(true);
         }
     }
 
@@ -227,6 +232,7 @@ public class LevelManager : MonoBehaviour
             AudioManager.Instance.FadeOutMusic(2f);
             retryPannel.SetActive(true);
             panelPause.SetActive(false);
+            playerController.SetCanMove(false);
         }
     }
     public void ContinueButton()
@@ -235,6 +241,7 @@ public class LevelManager : MonoBehaviour
         AudioManager.Instance.MiMusicVolume();
         retryPannel.SetActive(false);
         Time.timeScale = 1f;
+        playerController.SetCanMove(true);
     }
     
     public void BackButton()

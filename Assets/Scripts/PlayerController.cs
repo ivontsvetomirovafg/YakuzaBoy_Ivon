@@ -563,4 +563,9 @@ public class PlayerController : MonoBehaviour
     {
         killsText.text = "x" + killCount.ToString();
     }
+
+    public void SetCanMove(bool valor) //para que en el pause no se mueva lol. 
+    {
+        canMove = valor;
+    }
 }
