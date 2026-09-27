@@ -92,6 +92,7 @@ public class LevelManager : MonoBehaviour
     public void FinishLevel()
     {
         levelFinished = true;
+        playerController.SetCanMove(false);
 
         AudioManager.Instance.FadeOutMusic(2f);
         AudioManager.Instance.PlaySFX(victorySFX);
